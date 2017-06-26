@@ -1,4 +1,5 @@
-# mediabank
+# MediaBank
+The right place for your digital assets.
 EPrints implementation. Works on EPrints vanilla 3.3.10 - 3.3.15
 
 # SuperPowers
