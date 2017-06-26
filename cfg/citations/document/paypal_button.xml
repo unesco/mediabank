@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html SYSTEM "entities.dtd">
+<cite:citation xmlns="http://www.w3.org/1999/xhtml" xmlns:cite="http://eprints.org/ep3/citation" xmlns:epc="http://eprints.org/ep3/control">
+    <div class="paypal-price">
+        <span class="paypal-currency"><epc:phrase ref="paypal_currency_{$currency}"/></span>
+        <epc:print expr="$price"/>
+        <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="business" value="{$config{paypal}{merchantid}}"/>
+            <input type="hidden" name="cmd" value="_cart"/>
+            <input type="hidden" name="add" value="1"/>
+            <input type="hidden" name="item_name" value="{main}"/>
+            <input type="hidden" name="item_number" value="{$item.uri()}"/>
+            <input type="hidden" name="amount" value="{$price}"/>
+            <input type="hidden" name="currency_code" value="{$currency}"/>
+            <input type="hidden" name="custom" value="{$userid}"/>
+            <input type="image" class="btn btn-success btn-lg" role="button" value="Add To Cart" />
+            <img alt="" border="0" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" />
+        </form>
+    </div>
+</cite:citation>

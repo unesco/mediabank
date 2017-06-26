@@ -1,0 +1,82 @@
+use EPrints;
+
+use strict;
+
+my $session = EPrints::Session->new();
+
+# security?
+
+my $content = "text/xml";
+$session->send_http_header( content_type=>$content );
+my $family = $session->param( "_family" );
+my $given = $session->param( "_given" );
+my $honourific = $session->param( "_honourific" );
+
+my $database = $session->get_database;
+my $dataset = $session->dataset( "eprint" );
+my $name_field = $dataset->get_field( "person_shown" );
+
+my @fields = ($name_field->get_sql_names);
+
+my $Q_table = $database->quote_identifier($dataset->get_sql_table_name);
+my $Q_name_table = $database->quote_identifier($dataset->get_sql_sub_table_name($name_field));
+my $Q_eprintid = $database->quote_identifier( "eprintid" );
+my $Q_pos = $database->quote_identifier( "pos" );
+my $Q_num_matches = $database->quote_identifier( "num_matches" );
+my $Q_eprint_status = $database->quote_identifier( "eprint_status" );
+
+my $sql = "SELECT COUNT($Q_table.$Q_eprintid) ".$database->sql_AS." $Q_num_matches," .
+	join(",", map { $database->quote_identifier($_) } @fields) .
+	" FROM $Q_table" .
+	" LEFT JOIN $Q_name_table" .
+	" ON $Q_table.$Q_eprintid=$Q_name_table.$Q_eprintid" .
+	" WHERE " .
+	" $Q_table.$Q_eprint_status=".$database->quote_value( "archive" );
+if( EPrints::Utils::is_set( $family ) ){
+    $sql .= " AND ".$database->quote_identifier("person_shown_family").$database->sql_LIKE().$database->quote_value(EPrints::Database::prep_like_value($family).'%');
+}
+if( EPrints::Utils::is_set( $given ) ) {
+    $sql .= " AND ".$database->quote_identifier("person_shown_given").$database->sql_LIKE().$database->quote_value(EPrints::Database::prep_like_value($given).'%');
+}
+if( EPrints::Utils::is_set( $honourific ) ) {
+    $sql .= " AND ".$database->quote_identifier("person_shown_honourific").$database->sql_LIKE().$database->quote_value(EPrints::Database::prep_like_value($honourific).'%');
+}
+$sql .= "GROUP BY ".join(",",map { $database->quote_identifier($_) } @fields) . " ORDER BY $Q_num_matches DESC," . $database->quote_identifier("person_shown_family").",". $database->quote_identifier("person_shown_given");
+
+my @rows;
+
+my $sth = $session->get_database->prepare_select( $sql, 'limit' => 40 );
+$session->get_database->execute( $sth , $sql );
+while( my @row = $sth->fetchrow_array ){
+    my $cnt = shift @row;
+    my $name = $name_field->value_from_sql_row( $session, \@row );
+    
+    my $item = {};
+    push @rows, $item;
+    
+    my $frag = $session->make_doc_fragment;
+    
+    $frag->appendChild( $name_field->render_single_value( $session, $name ) );
+    
+    $frag->appendChild( $session->html_phrase( 'cgi/lookup/name:vip', count => $session->make_text( $cnt ) ) );
+    $item->{xhtml} = $frag;
+    $item->{values} = [
+        "for:value:relative:_family" => $name->{family},
+        "for:value:relative:_given" => $name->{given},
+        "for:value:relative:_honourific" => $name->{honourific},
+    ];
+}
+    
+$sth->finish();
+
+my $ul = EPrints::Extras::render_lookup_list( $session, \@rows );
+$session->send_http_header( content_type => "text/xml; charset=UTF-8" );
+    
+binmode(STDOUT,":utf8");
+print <<END;
+<?xml version="1.0" encoding="UTF-8" ?>
+
+END
+print EPrints::XML::to_string( $ul, "utf-8", 1 );
+EPrints::XML::dispose( $ul );
+$session->terminate;

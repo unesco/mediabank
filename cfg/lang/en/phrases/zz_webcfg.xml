@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE phrases SYSTEM "entities.dtd">
+<epp:phrases xmlns="http://www.w3.org/1999/xhtml" xmlns:epp="http://eprints.org/ep3/phrase" xmlns:epc="http://eprints.org/ep3/control">
+
+        <epp:phrase id="metapage_title_local">Misc.</epp:phrase>
+        <epp:phrase id="lib/metafield:unspecified"/>
+        <epp:phrase id="eprint_fieldname_test">countries</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_test">dd</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_date">Use this field to record the date (and optionally, the time) the photograph was created, not the date when you scanned or edited the image. If you use a digital camera, you can look at the Exif data for the date/time stamp.&#13; Be aware that how this field can be used highly depends on the user interface control used by the software maker.&#13; By the XMP specifications these alternative inputs should be supported by the control:&#13; - a year only (may be used for historic photos)&#13; - a year and a month only (may be used for photos with an unclear day of the date)&#13; - a full date (year and month and day)&#13; - a full date with a time, including a time zone.&#13; If only a date is given, no time or time zone information needs to be added. If you are entering a time, you should include the time zone as well. If no time is available the value should default to an empty time part and not to the time 00:00:00.&#13; Note: at present Exif does not hold time zone information for its timestamp fields; it is simply assumed that the digital camera has been correctly set for the local time of the location where the photo is taken. However, XMP does require time zone information when you enter times with a date. To add a time zone when importing or copying an Exif timestamp in most cases the software used for editing the metadata applies the time zone which is defined by settings of its local computer operating system (Windows, Mac OS, ...). This requires checking if the time zone to which the camera was set and the time zone of the computer are identical, else the time has to be adapted accordingly. If entering Date Created with an unclear time zone information or for images not made with a digital camera it may be simplest to only enter the date without any time.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_date">Date</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_Intellectual Genre">Use this field to describe the “type” of use that a photograph fulfils in terms of its intellectual or journalistic characteristics. For example, at a newspaper, Intellectual Genre labels might include terms like daybook, obituary, press release, or transcript. A magazine might use terms like actuality, interview, background, feature, summary, or wrap-up. For best results, organizations should use a set of terms from a controlled vocabulary that they have developed. A sample taxonomy of “Intellectual genre” terms developed by the IPTC is available from http://cv.iptc.org/newscodes/genre . The PRISM working group of the IDEAlliance has also developed a set of terms that can be referenced at http://prismstandard.org/ .</epp:phrase>
+        <epp:phrase id="eprint_fieldname_Intellectual Genre">Intellectual Genre</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_IPTC Scene Code">This field is used to describe the scene of a photo using one or more terms from the IPTC "Scene-NewsCodes". You should only enter values from the IPTC Scene controlled vocabulary (available from http://www.newscodes.org and http://cv.iptc.org/newscodes/scene). Each IPTC Scene term is represented as a 6 digit numerical string in an unordered list.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_IPTC Scene Code">IPTC Scene Code</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_Headline">A headline is a brief publishable synopsis or summary of the contents of the photograph. Like a news story, the Headline should grab attention, and telegraph the content of the image to the audience. Headlines need to be succinct. Leave the supporting narrative for the Description field. Do not, however, confuse the Headline term with the Title term.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_Headline">Headline</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_subjects">This field can be used to specify and categorize the content of a photograph by using one or more subjects as listed in the IPTC “Subject NewsCodes” taxonomy (available from http://www.newscodes.org and http://cv.iptc.org/newscodes/subjectcode). Each subject term is represented as a string of 8 digits in an unordered list. Only subjects from a controlled vocabulary should be used in this field, free-choice text should be entered into the Keyword field.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_subjects">Subject(s)</epp:phrase>
+        <epp:phrase id="eprint_fieldname_job_identifier">Job Identifier</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_job_identifier">You can enter a number or identifier that was created or issued for the purpose of improving workflow handling and image tracking. This ID is typically added by the creator or image provider for transmission and routing purposes and related to the job for which the image is supplied (please note that this same field was labelled as the “transmission reference” in previous versions of Adobe Photoshop).</epp:phrase>
+        <epp:phrase id="eprint_fieldname_person_shown">People featured</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_person_shown">Use this field to note the name of a person or persons shown in the image. Typically these would be recorded as they would be typed in a query, first name / last name (given name / surname). If indicating more than one name, you can use commas, or semicolons to separate the names.</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_organisation">IPTC Extension provides two fields for this purpose. They can be used to identify an organisation by its name and/or by a code (or identifier) used by e.g. a stocks exchange. But these two fields are not strictly linked, that means one cannot indicate “this company has the name ACME and its stock exchange ID NACME” in a single input row, these values can only be input independently. However, searching for photos of a company will work in any case, one need only decide whether to search by name or by code.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_organisation">Organisation(s) featured</epp:phrase>
+        <epp:phrase id="eprint_fieldname_event">Event</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_event">Use this field to name or describe the specific event at which the photo was taken. Rather than use generic terms such as: press conference, race or festival; be specific and write, Archimedes press conference, The Great Steamboat Race, or Maui Classical Music Festival. This could make it easier to locate the image later. If this is a sub-event of a larger event both can be provided in the field: e.g. XXXIX Olympic Summer Games (Beijing): opening ceremony.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_title_artwork">Content featured</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_title_artwork">This field can be used as a shorthand reference for the image or “photograph” — primarily for identification. The title of an image should be a short, human-readable name — text and/or numeric reference —and may take several forms; for photographers this might be the filename of their original scan or digital camera file, for news organizations it might be the name of the story for which it’s to be used. (Note that there are new terms in the IPTC Extension which can also be used as image ID’s, if you are concerned about this field being overwritten later in the workflow). The Title term should not be confused with the Headline term, which is a short synopsis of the content of the photograph. There is a button in the panel which can be used to add the current file name to the Title field; however this will not work with a selection of images.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_date_artwork">Date of creation</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_date_artwork">Use this date field to designate the date (and optionally the time) that artwork or objects in the image were created. This option should only be used when you need to identify paintings, sculptures or other artwork or objects that have associated intellectual property rights of their own. Please note that historical dates can be handled differently by different operating systems. For historical dates it may be advisable to enter the date also in the description field. Also note that partial dates, e.g. just the year, may also read differently. Do not confuse this field value with the Date Created field that is part of the IPTC Core and IIM metadata.&#13; Be aware that how this field can be used highly depends on the user interface control used by the software maker.&#13; By the XMP specifications these alternative inputs should be supported by the control:&#13; - a year only (may be used for historic photos)&#13; - a year and a month only (may be used for photos with an unclear day of the date)&#13; - a full date (year and month and day)&#13; - a full date with a time, including a time zone.&#13; If only a date is given, no time or time zone information needs to be added. If you are entering a time, you should include the time zone as well. If no time is available the value should default to an empty time part and not to the time 00:00:00.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_creator_artwork">Author(s) of the content</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_creator_artwork">Use this field to record the name of the artist who has created artwork or others objects that are in the image and may have associated intellectual property rights. In cases where the artist cannot or should not be identified, the name of a company or organisation may be used if appropriate.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_source_artwork">Source (of Artwork/Object)</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_source_artwork">If you know the name of the organisation or body that holds or has registered the artwork or object in the image for inventory purposes, you can indicate that in this field.</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_source_ID_artwork">If there is an inventory number that was issued by the organisation or body holding and registering the artwork or object shown in the image, you can indicate that inventory number in this field.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_source_ID_artwork">Source Inventory Number (of Artwork/Object)</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_copyright_artwork">Contains any necessary copyright notice for claiming the intellectual property for artwork or an object in the image and should identify the current owner of the copyright of this work with associated intellectual property rights.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_copyright_artwork"> Copyright Notice of the content</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_divisions">Internal division responsible for the work</epp:phrase>
+        <epp:phrase id="eprint_fieldname_divisions">UNESCO Sector</epp:phrase>
+        <epp:phrase id="eprint_fieldname_official_url">Official URL</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_official_url">Official URL in case of a project related media</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_availability"/>
+        <epp:phrase id="eprint_fieldname_availability">Restrictions</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_title">This field can be used as a shorthand reference for the image or “photograph” — primarily for identification. The title of an image should be a short, human-readable name — text and/or numeric reference —and may take several forms; for photographers this might be the filename of their original scan or digital camera file, for news organizations it might be the name of the story for which it’s to be used. (Note that there are new terms in the IPTC Extension which can also be used as image ID’s, if you are concerned about this field being overwritten later in the workflow). The Title term should not be confused with the Headline term, which is a short synopsis of the content of the photograph. There is a button in the panel which can be used to add the current file name to the Title field; however this will not work with a selection of images.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_title">Title</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_caption">A headline is a brief publishable synopsis or summary of the contents of the photograph. Like a news story, the Headline should grab attention, and telegraph the content of the image to the audience. Headlines need to be succinct. Leave the supporting narrative for the Description field. Do not, however, confuse the Headline term with the Title term.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_caption">Headline</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_keywords">Enter keywords (terms or phrases) used to express the subject of the content seen in the photograph. Keywords may be free text (i.e. they are not required to be taken from a controlled vocabulary). You may enter (or paste) any number of keywords, terms or phrases into this field, simply separate them with a comma or semi-colon. To maintain backwards compatibility no single value (keyword term or phrase) should exceed 64 characters. Values from the controlled vocabulary IPTC Subject Codes must be placed into the “Subject Code” field.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_keywords">Collection</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_abstract">The Description field, often referred to as a “caption” is used to describe the who, what (and possibly where and when) and why of what is happening in the photograph. If there is a person or people in the image, this caption might include their names, and/or their role in the action that is taking place. If the image is of a location, then it should give information regarding the location. Don’t forget to also include this same “geographical” information in the Image panel (location, city, state/province, country) of the IPTC Core. The amount of detail you include will depend on the image and whether the image is documentary or conceptual. Typically, editorial images come with complete caption text, while advertising images may not.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_abstract">Description</epp:phrase>
+        <epp:phrase id="eprint_fieldname_headline">Headline</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_headline">A headline is a brief publishable synopsis or summary of the contents of the photograph. Like a news story, the Headline should grab attention, and telegraph the content of the image to the audience. Headlines need to be succinct. Leave the supporting narrative for the Description field. Do not, however, confuse the Headline term with the Title term.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_scene_code">IPTC Scene Code</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_scene_code">This field is used to describe the scene of a photo using one or more terms from the IPTC "Scene-NewsCodes". You should only enter values from the IPTC Scene controlled vocabulary (available from http://www.newscodes.org and http://cv.iptc.org/newscodes/scene). Each IPTC Scene term is represented as a 6 digit numerical string in an unordered list.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_genre">Intellectual Genre</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_genre">Use this field to describe the “type” of use that a photograph fulfils in terms of its intellectual or journalistic characteristics. For example, at a newspaper, Intellectual Genre labels might include terms like daybook, obituary, press release, or transcript. A magazine might use terms like actuality, interview, background, feature, summary, or wrap-up. For best results, organizations should use a set of terms from a controlled vocabulary that they have developed. A sample taxonomy of “Intellectual genre” terms developed by the IPTC is available from http://cv.iptc.org/newscodes/genre . The PRISM working group of the IDEAlliance has also developed a set of terms that can be referenced at http://prismstandard.org/ .</epp:phrase>
+        <epp:phrase id="template:export_button">Export</epp:phrase>
+
+        <epp:phrase id="content_typename_original">Original</epp:phrase>
+
+        <epp:phrase id="metapage_title_contact">Contact section</epp:phrase>
+
+        <epp:phrase id="metapage_title_content">Content section</epp:phrase>
+
+        <epp:phrase id="metapage_title_image">Detailed information</epp:phrase>
+
+        <epp:phrase id="metapage_title_subject">Subject Code</epp:phrase>
+
+        <epp:phrase id="scene_typename_night">night scene : A photo taken during darkness</epp:phrase>
+
+        <epp:phrase id="eprint_fieldname_where_shown">Location featured</epp:phrase>
+
+        <epp:phrase id="eprint_fieldname_where_shown_city">City</epp:phrase>
+
+        <epp:phrase id="eprint_fieldname_where_shown_country">Country</epp:phrase>
+
+        <epp:phrase id="eprint_fieldname_where_shown_sublocation">Place</epp:phrase>
+
+        <epp:phrase id="eprint_fieldname_where_shown_state">Province or State</epp:phrase>
+
+        <epp:phrase id="eprint_fieldname_where_created_sublocation">Sublocation (of Location Created)</epp:phrase>
+
+        <epp:phrase id="eprint_fieldname_where_created_state">Province/State (of Location Created)</epp:phrase>
+
+        <epp:phrase id="eprint_fieldname_where_created_country">Country Name (of Location Created)</epp:phrase>
+
+        <epp:phrase id="eprint_fieldname_where_created_city">City (of Location Created)</epp:phrase>
+
+        <epp:phrase id="eprint_fieldname_where_created">Location in which the image was created </epp:phrase>
+
+        <epp:phrase id="eprint_fieldhelp_where_created">Use this set of fields to record the location where the photo was taken. If the location depicted in the image is different from the location where the photo was taken then the IPTC Extension field “Location Shown in the Image” should be used to note the difference. For example, if you are photographing a mountain with a telephoto lens from a distance, it is possible that you may be standing on the other side of a state or even country border.</epp:phrase>
+
+        <epp:phrase id="eprint_fieldhelp_where_shown">This field provides a means to record structured data regarding the location shown in the image. This field should contain a set of values different from those in the “Location in which the image was created” section in situations where the subject shown in the image is different from the location depicted in the image.</epp:phrase>
+
+        <epp:phrase id="content_typename_carousel">Carousel</epp:phrase>
+        <epp:phrase id="viewname_eprint_scenes">Scene Code</epp:phrase>
+        <epp:phrase id="viewname_eprint_genres">Intellectual Genre</epp:phrase>
+        <epp:phrase id="viewname_eprint_countries">Countries</epp:phrase>
+        <epp:phrase id="viewname_eprint_keywords">Collections</epp:phrase>
+
+
+        <epp:phrase id="eprint_fieldname_credit_line">Copyright</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_credit_line">The Credit Line is a free-text field used by the supplier of the item to specify how the person(s) and/or organisation(s) should be credited when the image is published. More formal identifications of the creator or the owner of the copyright to this image can be indicated in other rights specific fields. In the IIM metadata this property was called "Credit" and was renamed to "Provider" in IPTC Core 1.0. It has been renamed to “Credit Line” in this latest version of the IPTC Core 1.1. as this is how the field has continued to be used.</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_copyright_notice">The Copyright Notice should contain any necessary copyright notice for claiming the intellectual property, and should identify the current owner(s) of the copyright for the photograph. Other entities like the creator of the photograph may be added in the corresponding field. Usually, the value for this copyright notice would be the photographer, but if the image was done by an employee or as work-for-hire, then the agency or company should be listed. Use the form appropriate to your country.&#13; For the United States you would typically follow the form of ©&lt;year of first publication&gt; name of copyright owner, as in “©2010 John Doe.” Note, the word “copyright” or the abbreviation “copr” may be used in place of the © symbol. In some countries only the copyright symbol is recognized and the abbreviation does not work. Furthermore the copyright symbol must be a full circle with a “c” inside; using something like (c) where the parentheses form a partial circle is not sufficient. For additional protection worldwide, use of the phrase, “All Rights Reserved” following the notice above is encouraged.&#13; In Europe you would use: Copyright {Year} {Copyright owner}, all rights reserved.&#13; In Japan, for maximum protection, the following three items should appear in the copyright field of the IPTC Core: (a) the word, Copyright; (b) year of the first publication; and (c) name of the copyright holder. You may also wish to include the phrase “all rights reserved.”&#13; Notes on usage rights should be provided in the “Rights Usage Terms” field.</epp:phrase>
+        <epp:phrase id="eprint_fieldname_copyright_notice">Copyright Notice</epp:phrase>
+        <epp:phrase id="eprint_fieldname_right_usage">Rights Usage Terms</epp:phrase>
+        <epp:phrase id="eprint_fieldhelp_right_usage">The Rights Usage Terms field should include free-text instructions on how this photograph can be legally used. For example, if you are submitting the image(s) for consideration only, you can indicate that, and stipulate that no reproduction is allowed without permission being negotiated in advance. The PLUS fields of the IPTC Extension can be used in parallel to express the licensed usage in more controlled terms. In addition, a PLUS “Media Summary Code” may be entered in this field to more accurately describe any permissions and constraints associated with the image. It is strongly encouraged that you use a standardised set of terms or controlled vocabulary when populating this field.</epp:phrase>
+        <epp:phrase id="summary_page:vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></epp:phrase>
+
+        <epp:phrase id="summary_page:downloads_hd">Download Original</epp:phrase>
+        <epp:phrase id="summary_page:buy_hd">Purchase</epp:phrase>
+        <epp:phrase id="summary_page:download_preview">Preview</epp:phrase>
+        <epp:phrase id="summary_page:downloads_others">Other Downloads</epp:phrase>
+
+        <epp:phrase id="document_fieldname_document">Document</epp:phrase>
+
+        <epp:phrase id="document_fieldname_price">Full Price in €</epp:phrase>
+        <epp:phrase id="document_fieldhelp_price">This is the full price in € before applying discount.</epp:phrase>
+        <epp:phrase id="user_fieldhelp_dept">Use this field to indicate the full name of the organisation, department or company of the person.</epp:phrase>
+        <epp:phrase id="user_fieldname_dept">Organisation (including companies)</epp:phrase>
+        <epp:phrase id="user_fieldname_name">User name</epp:phrase>
+        <epp:phrase id="user_fieldhelp_name">This field should contain the name of the person who created the photograph. If it is not appropriate to add the name of the photographer (for example, if the identity of the photographer needs to be protected) the name of a company or organisation can also be used. Once saved, this field should not be changed by anyone. This field does not support the use of commas or semi-colons as a separator.</epp:phrase>
+        <epp:phrase id="user_fieldname_hideemail">Hide email</epp:phrase>
+        <epp:phrase id="user_fieldhelp_hideemail">If you tick this box, your email address will not be displayed on your public summary page.</epp:phrase>
+        <epp:phrase id="user_fieldhelp_jobtitle">This field should contain the job title of the person who created the photograph. Examples might include titles such as: Staff Photographer, Independent Commercial Photographer, or staff writer. Since this is a qualifier for the Creator field, the Creator field must also be filled out.</epp:phrase>
+        <epp:phrase id="user_fieldname_jobtitle">Job Title</epp:phrase>
+        <epp:phrase id="user_fieldname_address_city">City</epp:phrase>
+
+        <epp:phrase id="user_fieldname_address_country">Country</epp:phrase>
+
+        <epp:phrase id="user_fieldname_address_state">State</epp:phrase>
+
+        <epp:phrase id="user_fieldname_address_sublocation">Postal Code</epp:phrase>
+
+
+        <epp:phrase id="user_fieldname_nationality">Nationality</epp:phrase>
+        <epp:phrase id="user_fieldhelp_nationality">The nationality</epp:phrase>
+        <epp:phrase id="languages_typename_fr">Français</epp:phrase>
+
+        <epp:phrase id="languages_typename_ru">Русский</epp:phrase>
+        <epp:phrase id="languages_typename_none">None</epp:phrase>
+
+        <epp:phrase id="languages_typename_zh">中文</epp:phrase>
+
+        <epp:phrase id="languages_typename_ar">العربية</epp:phrase>
+
+        <epp:phrase id="eprint_fieldname_creators_dept">Organisation</epp:phrase>
+
+        <epp:phrase id="eprints_security_typename_public">Visible to all</epp:phrase>
+
+        <epp:phrase id="eprints_security_typename_staffonly">Only Staff</epp:phrase>
+
+        <epp:phrase id="eprints_security_typename_validuser">All registered users</epp:phrase>
+
+        <epp:phrase id="template:report_button">Report</epp:phrase>
+
+        <epp:phrase id="template:details_button">Edit</epp:phrase>
+
+        <epp:phrase id="eprint_fieldname_ml_title">Title</epp:phrase>
+
+    <epp:phrase id="eprint_fieldname_ml_title_lang">Lang</epp:phrase>
+
+    <epp:phrase id="eprint_fieldname_ml_title_text">Title</epp:phrase>
+
+    <epp:phrase id="eprint_fieldname_tags">Collections</epp:phrase>
+
+    <epp:phrase id="eprint_fieldname_ml_abstract">Abstract</epp:phrase>
+
+    <epp:phrase id="eprint_fieldname_ml_abstract_lang">Lang</epp:phrase>
+
+    <epp:phrase id="eprint_fieldname_ml_abstract_text">Abstract</epp:phrase>
+
+    <epp:phrase id="eprint_fieldname_ml_headline">Caption</epp:phrase>
+
+    <epp:phrase id="eprint_fieldname_ml_headline_lang">Lang</epp:phrase>
+
+    <epp:phrase id="eprint_fieldname_ml_headline_text">Caption</epp:phrase>
+
+    <epp:phrase id="eprint_fieldname_creators">Author(s)</epp:phrase>
+
+    <epp:phrase id="eprint_fieldname_creators_name">Author(s)</epp:phrase>
+
+    <epp:phrase id="Plugin/InputForm/Component/Upload:title">Add a new resource</epp:phrase>
+
+    <epp:phrase id="Plugin/InputForm/Component/Upload:help"><p style="margin-top: 0px">To upload a resource to this repository, click the Browse button below to select the file and the Upload button to upload it to the archive. You may then add additional files to the document (such as images for HTML files) or upload more files to create additional documents.</p><p style="margin-bottom: 0px">You may wish to use the <a href="http://www.sherpa.ac.uk/romeo.php" target="_blank">SHERPA RoMEO</a> tool to verify publisher policies before depositing.</p></epp:phrase>
+
+    <epp:phrase id="document_fieldname_language">Language of resource</epp:phrase>
+
+    <epp:phrase id="document_fieldname_formatdesc">Notes</epp:phrase>
+
+    <epp:phrase id="document_fieldhelp_formatdesc">You may offer an additional brief description of the uploaded resource.</epp:phrase>
+
+    <epp:phrase id="document_typename_document">Document</epp:phrase>
+
+    <epp:phrase id="template/navigation:photos">Photos</epp:phrase>
+
+    <epp:phrase id="template/navigation:videos">Videos</epp:phrase>
+
+    <epp:phrase id="template/navigation:audio">Audio</epp:phrase>
+
+    <epp:phrase id="lib/searchexpression:action_search_all">All</epp:phrase>
+
+    <epp:phrase id="lib/searchexpression:advanced_link">Advanced</epp:phrase>
+
+    <epp:phrase id="lib/searchexpression:action_search_photo">Photos</epp:phrase>
+
+    <epp:phrase id="lib/searchexpression:action_search_video">Video</epp:phrase>
+
+    <epp:phrase id="lib/searchexpression:action_search_audio">Audio</epp:phrase>
+</epp:phrases>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+    <!DOCTYPE phrases SYSTEM "entities.dtd">
+
+    <epp:phrases xmlns="http://www.w3.org/1999/xhtml" xmlns:epp="http://eprints.org/ep3/phrase" xmlns:epc="http://eprints.org/ep3/control">
+        <epp:phrase id="Update/Views:up_a_level">
+            <div class="levelup">
+                <epc:pin name="url"><i class="fa fa-arrow-left">Back to all items</i></epc:pin>
+            </div>
+        </epp:phrase>
+        <epp:phrase id="bin/generate_views:timestamp">
+            <div class="col-sm-12">This list was generated on <strong><epc:pin name="time"/></strong>.</div>
+        </epp:phrase>
+        <epp:phrase id="licenses_typename_cc_by_sa_3_igo">Creative Commons: Attribution-ShareAlike 3.0 IGO</epp:phrase>
+        <epp:phrase id="licenses_description_cc_by_sa_3_igo"><a href="http://creativecommons.org/licenses/by-sa/3.0/igo/deed.en">Creative Commons Attribution Share Alike IGO</a></epp:phrase>
+        <epp:phrase id="document_fieldhelp_content">
+            <p>The use of this document, as opposed to the format.</p>
+            <ul>
+                <li>Original, which is the original object</li>
+                <li>Cover image, will be used as a cover instead of an automatically resized image</li>
+                <li>Carousel, will be used for eprints featured in the carousel (image size: 980x450)</li>
+            </ul>
+        </epp:phrase>
+        <epp:phrase id="document_fieldhelp_format">Please select the storage format of this document. The document can be, for example, the cover image for a video, or the carousel image of a document</epp:phrase>
+        <epp:phrase id="security_typename_public">Public</epp:phrase>
+        <epp:phrase id="document_fieldname_language">Language of attached document</epp:phrase>
+        <epp:phrase id="document_fieldhelp_language">i.e. the language of a cover or the language of a audio clip or a movie</epp:phrase>
+        <epp:phrase id="index_browse" >
+            <a class="" href="{$config{http_root}}/view/subjects/">Browse Repository</a>
+            <p>Browse the items in the repository.</p>
+        </epp:phrase>
+        <epp:phrase id="index_about" >
+            <a class="" href="{$config{http_root}}/information.html">About this Repository</a>
+            <p>More information about this site.</p>
+        </epp:phrase>
+        <epp:phrase id="index_policies">
+            <a class="" href="{$config{http_root}}/policies.html">Repository Policies</a>
+            <p>Policy for use of material in this repository.</p>
+        </epp:phrase>
+        <epp:phrase id="cgi/lookup/name:authored"><small> (author of <epc:pin name="count"/> item(s) in this repository)</small></epp:phrase>
+        <epp:phrase id="cgi/lookup/name:vip"><small> (mentioned in <epc:pin name="count"/> item(s) in this repository)</small></epp:phrase>
+        <epp:phrase id="lib/metafield:join_id">&lt;</epp:phrase>
+
+        <epp:phrase id="lib/searchfield:help_virtualwithvalue">Search within all the values</epp:phrase>
+
+</epp:phrases>

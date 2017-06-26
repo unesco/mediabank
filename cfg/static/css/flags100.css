@@ -1,0 +1,1585 @@
+/* glue: 0.11.1 hash: 30ca5feee4 */
+
+.sprite-flags100-zw,
+.sprite-flags100-ws,
+.sprite-flags100-va,
+.sprite-flags100-uz,
+.sprite-flags100-tv,
+.sprite-flags100-to,
+.sprite-flags100-tl,
+.sprite-flags100-tj,
+.sprite-flags100-st,
+.sprite-flags100-ss,
+.sprite-flags100-si,
+.sprite-flags100-sd,
+.sprite-flags100-sc,
+.sprite-flags100-sb,
+.sprite-flags100-qa,
+.sprite-flags100-ps,
+.sprite-flags100-ph,
+.sprite-flags100-om,
+.sprite-flags100-nz,
+.sprite-flags100-nr,
+.sprite-flags100-ng,
+.sprite-flags100-my,
+.sprite-flags100-mn,
+.sprite-flags100-mk,
+.sprite-flags100-me,
+.sprite-flags100-md,
+.sprite-flags100-ly,
+.sprite-flags100-lv,
+.sprite-flags100-lk,
+.sprite-flags100-lc,
+.sprite-flags100-kz,
+.sprite-flags100-kw,
+.sprite-flags100-kp,
+.sprite-flags100-ki,
+.sprite-flags100-jo,
+.sprite-flags100-jm,
+.sprite-flags100-ie,
+.sprite-flags100-hu,
+.sprite-flags100-hr,
+.sprite-flags100-hn,
+.sprite-flags100-gw,
+.sprite-flags100-gb,
+.sprite-flags100-fj,
+.sprite-flags100-et,
+.sprite-flags100-er,
+.sprite-flags100-dm,
+.sprite-flags100-cu,
+.sprite-flags100-ch,
+.sprite-flags100-ca,
+.sprite-flags100-by,
+.sprite-flags100-bs,
+.sprite-flags100-bn,
+.sprite-flags100-be,
+.sprite-flags100-ba,
+.sprite-flags100-az,
+.sprite-flags100-au,
+.sprite-flags100-am,
+.sprite-flags100-ae,
+.sprite-flags100-us,
+.sprite-flags100-mh,
+.sprite-flags100-lr,
+.sprite-flags100-fm,
+.sprite-flags100-sv,
+.sprite-flags100-mx,
+.sprite-flags100-ir,
+.sprite-flags100-cv,
+.sprite-flags100-vu,
+.sprite-flags100-tt,
+.sprite-flags100-py,
+.sprite-flags100-ni,
+.sprite-flags100-lu,
+.sprite-flags100-lt,
+.sprite-flags100-li,
+.sprite-flags100-km,
+.sprite-flags100-kg,
+.sprite-flags100-ht,
+.sprite-flags100-gy,
+.sprite-flags100-gd,
+.sprite-flags100-de,
+.sprite-flags100-cy,
+.sprite-flags100-cr,
+.sprite-flags100-bi,
+.sprite-flags100-bh,
+.sprite-flags100-bg,
+.sprite-flags100-bd,
+.sprite-flags100-fi,
+.sprite-flags100-tg,
+.sprite-flags100-se,
+.sprite-flags100-pw,
+.sprite-flags100-pl,
+.sprite-flags100-gt,
+.sprite-flags100-do,
+.sprite-flags100-ee,
+.sprite-flags100-ar,
+.sprite-flags100-zm,
+.sprite-flags100-za,
+.sprite-flags100-ye,
+.sprite-flags100-vn,
+.sprite-flags100-ve,
+.sprite-flags100-vc,
+.sprite-flags100-uy,
+.sprite-flags100-unesco,
+.sprite-flags100-ug,
+.sprite-flags100-ua,
+.sprite-flags100-tz,
+.sprite-flags100-tr,
+.sprite-flags100-tn,
+.sprite-flags100-tm,
+.sprite-flags100-th,
+.sprite-flags100-td,
+.sprite-flags100-sz,
+.sprite-flags100-sy,
+.sprite-flags100-sr,
+.sprite-flags100-so,
+.sprite-flags100-sn,
+.sprite-flags100-sl,
+.sprite-flags100-sk,
+.sprite-flags100-sg,
+.sprite-flags100-sa,
+.sprite-flags100-rw,
+.sprite-flags100-ru,
+.sprite-flags100-rs,
+.sprite-flags100-ro,
+.sprite-flags100-pt,
+.sprite-flags100-pk,
+.sprite-flags100-pe,
+.sprite-flags100-pa,
+.sprite-flags100-nl,
+.sprite-flags100-na,
+.sprite-flags100-mz,
+.sprite-flags100-mw,
+.sprite-flags100-mv,
+.sprite-flags100-mu,
+.sprite-flags100-mt,
+.sprite-flags100-mr,
+.sprite-flags100-mm,
+.sprite-flags100-ml,
+.sprite-flags100-mg,
+.sprite-flags100-ma,
+.sprite-flags100-ls,
+.sprite-flags100-lb,
+.sprite-flags100-la,
+.sprite-flags100-kr,
+.sprite-flags100-kn,
+.sprite-flags100-kh,
+.sprite-flags100-ke,
+.sprite-flags100-jp,
+.sprite-flags100-it,
+.sprite-flags100-iq,
+.sprite-flags100-in,
+.sprite-flags100-id,
+.sprite-flags100-gr,
+.sprite-flags100-gq,
+.sprite-flags100-gn,
+.sprite-flags100-gm,
+.sprite-flags100-gh,
+.sprite-flags100-ge,
+.sprite-flags100-fr,
+.sprite-flags100-es,
+.sprite-flags100-eg,
+.sprite-flags100-ec,
+.sprite-flags100-dz,
+.sprite-flags100-dj,
+.sprite-flags100-cz,
+.sprite-flags100-co,
+.sprite-flags100-cn,
+.sprite-flags100-cm,
+.sprite-flags100-cl,
+.sprite-flags100-ci,
+.sprite-flags100-cg,
+.sprite-flags100-cf,
+.sprite-flags100-bz,
+.sprite-flags100-bw,
+.sprite-flags100-bt,
+.sprite-flags100-bj,
+.sprite-flags100-bf,
+.sprite-flags100-bb,
+.sprite-flags100-at,
+.sprite-flags100-ao,
+.sprite-flags100-ag,
+.sprite-flags100-af,
+.sprite-flags100-bo,
+.sprite-flags100-br,
+.sprite-flags100-ad,
+.sprite-flags100-al,
+.sprite-flags100-no,
+.sprite-flags100-is,
+.sprite-flags100-il,
+.sprite-flags100-sm,
+.sprite-flags100-pg,
+.sprite-flags100-ga,
+.sprite-flags100-cd,
+.sprite-flags100-dk,
+.sprite-flags100-mc,
+.sprite-flags100-ne,
+.sprite-flags100-np {
+    background-image: url('../images/flags100.png');
+    background-repeat: no-repeat;
+}
+
+.sprite-flags100-zw {
+    background-position: -5px -5px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-ws {
+    background-position: -115px -5px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-va {
+    background-position: -5px -65px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-uz {
+    background-position: -115px -65px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-tv {
+    background-position: -5px -125px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-to {
+    background-position: -115px -125px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-tl {
+    background-position: -225px -5px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-tj {
+    background-position: -225px -65px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-st {
+    background-position: -225px -125px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-ss {
+    background-position: -5px -185px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-si {
+    background-position: -115px -185px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-sd {
+    background-position: -225px -185px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-sc {
+    background-position: -5px -245px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-sb {
+    background-position: -115px -245px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-qa {
+    background-position: -225px -245px;
+    width: 100px;
+    height: 39px;
+}
+
+.sprite-flags100-ps {
+    background-position: -335px -5px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-ph {
+    background-position: -335px -65px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-om {
+    background-position: -335px -125px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-nz {
+    background-position: -335px -185px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-nr {
+    background-position: -335px -245px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-ng {
+    background-position: -5px -305px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-my {
+    background-position: -115px -305px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-mn {
+    background-position: -225px -305px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-mk {
+    background-position: -335px -305px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-me {
+    background-position: -5px -365px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-md {
+    background-position: -115px -365px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-ly {
+    background-position: -225px -365px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-lv {
+    background-position: -335px -365px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-lk {
+    background-position: -445px -5px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-lc {
+    background-position: -445px -65px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-kz {
+    background-position: -445px -125px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-kw {
+    background-position: -445px -185px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-kp {
+    background-position: -445px -245px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-ki {
+    background-position: -445px -305px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-jo {
+    background-position: -445px -365px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-jm {
+    background-position: -5px -425px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-ie {
+    background-position: -115px -425px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-hu {
+    background-position: -225px -425px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-hr {
+    background-position: -335px -425px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-hn {
+    background-position: -445px -425px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-gw {
+    background-position: -5px -485px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-gb {
+    background-position: -115px -485px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-fj {
+    background-position: -225px -485px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-et {
+    background-position: -335px -485px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-er {
+    background-position: -445px -485px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-dm {
+    background-position: -555px -5px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-cu {
+    background-position: -555px -65px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-ch {
+    background-position: -555px -125px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-ca {
+    background-position: -555px -185px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-by {
+    background-position: -555px -245px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-bs {
+    background-position: -555px -305px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-bn {
+    background-position: -555px -365px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-be {
+    background-position: -555px -425px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-ba {
+    background-position: -555px -485px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-az {
+    background-position: -5px -545px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-au {
+    background-position: -115px -545px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-am {
+    background-position: -225px -545px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-ae {
+    background-position: -335px -545px;
+    width: 100px;
+    height: 50px;
+}
+
+.sprite-flags100-us {
+    background-position: -445px -545px;
+    width: 95px;
+    height: 50px;
+}
+
+.sprite-flags100-mh {
+    background-position: -550px -545px;
+    width: 95px;
+    height: 50px;
+}
+
+.sprite-flags100-lr {
+    background-position: -5px -605px;
+    width: 95px;
+    height: 50px;
+}
+
+.sprite-flags100-fm {
+    background-position: -110px -605px;
+    width: 95px;
+    height: 50px;
+}
+
+.sprite-flags100-sv {
+    background-position: -215px -605px;
+    width: 89px;
+    height: 50px;
+}
+
+.sprite-flags100-mx {
+    background-position: -314px -605px;
+    width: 88px;
+    height: 50px;
+}
+
+.sprite-flags100-ir {
+    background-position: -412px -605px;
+    width: 88px;
+    height: 50px;
+}
+
+.sprite-flags100-cv {
+    background-position: -510px -605px;
+    width: 85px;
+    height: 50px;
+}
+
+.sprite-flags100-vu {
+    background-position: -665px -5px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-tt {
+    background-position: -665px -65px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-py {
+    background-position: -665px -125px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-ni {
+    background-position: -665px -185px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-lu {
+    background-position: -665px -245px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-lt {
+    background-position: -665px -305px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-li {
+    background-position: -665px -365px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-km {
+    background-position: -665px -425px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-kg {
+    background-position: -665px -485px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-ht {
+    background-position: -665px -545px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-gy {
+    background-position: -665px -605px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-gd {
+    background-position: -5px -665px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-de {
+    background-position: -98px -665px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-cy {
+    background-position: -191px -665px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-cr {
+    background-position: -284px -665px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-bi {
+    background-position: -377px -665px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-bh {
+    background-position: -470px -665px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-bg {
+    background-position: -563px -665px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-bd {
+    background-position: -656px -665px;
+    width: 83px;
+    height: 50px;
+}
+
+.sprite-flags100-fi {
+    background-position: -758px -5px;
+    width: 82px;
+    height: 50px;
+}
+
+.sprite-flags100-tg {
+    background-position: -758px -65px;
+    width: 81px;
+    height: 50px;
+}
+
+.sprite-flags100-se {
+    background-position: -758px -125px;
+    width: 80px;
+    height: 50px;
+}
+
+.sprite-flags100-pw {
+    background-position: -758px -185px;
+    width: 80px;
+    height: 50px;
+}
+
+.sprite-flags100-pl {
+    background-position: -758px -245px;
+    width: 80px;
+    height: 50px;
+}
+
+.sprite-flags100-gt {
+    background-position: -758px -305px;
+    width: 80px;
+    height: 50px;
+}
+
+.sprite-flags100-do {
+    background-position: -758px -365px;
+    width: 80px;
+    height: 50px;
+}
+
+.sprite-flags100-ee {
+    background-position: -758px -425px;
+    width: 79px;
+    height: 50px;
+}
+
+.sprite-flags100-ar {
+    background-position: -758px -485px;
+    width: 78px;
+    height: 50px;
+}
+
+.sprite-flags100-zm {
+    background-position: -758px -545px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-za {
+    background-position: -758px -605px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-ye {
+    background-position: -758px -665px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-vn {
+    background-position: -5px -725px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-ve {
+    background-position: -90px -725px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-vc {
+    background-position: -175px -725px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-uy {
+    background-position: -260px -725px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-unesco {
+    background-position: -345px -725px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-ug {
+    background-position: -430px -725px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-ua {
+    background-position: -515px -725px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-tz {
+    background-position: -600px -725px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-tr {
+    background-position: -685px -725px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-tn {
+    background-position: -5px -785px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-tm {
+    background-position: -90px -785px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-th {
+    background-position: -175px -785px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-td {
+    background-position: -260px -785px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-sz {
+    background-position: -345px -785px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-sy {
+    background-position: -430px -785px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-sr {
+    background-position: -515px -785px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-so {
+    background-position: -600px -785px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-sn {
+    background-position: -685px -785px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-sl {
+    background-position: -850px -5px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-sk {
+    background-position: -850px -65px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-sg {
+    background-position: -850px -125px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-sa {
+    background-position: -850px -185px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-rw {
+    background-position: -850px -245px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-ru {
+    background-position: -850px -305px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-rs {
+    background-position: -850px -365px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-ro {
+    background-position: -850px -425px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-pt {
+    background-position: -850px -485px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-pk {
+    background-position: -850px -545px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-pe {
+    background-position: -850px -605px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-pa {
+    background-position: -850px -665px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-nl {
+    background-position: -850px -725px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-na {
+    background-position: -850px -785px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-mz {
+    background-position: -5px -845px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-mw {
+    background-position: -90px -845px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-mv {
+    background-position: -175px -845px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-mu {
+    background-position: -260px -845px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-mt {
+    background-position: -345px -845px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-mr {
+    background-position: -430px -845px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-mm {
+    background-position: -515px -845px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-ml {
+    background-position: -600px -845px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-mg {
+    background-position: -685px -845px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-ma {
+    background-position: -770px -845px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-ls {
+    background-position: -935px -5px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-lb {
+    background-position: -935px -65px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-la {
+    background-position: -935px -125px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-kr {
+    background-position: -935px -185px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-kn {
+    background-position: -935px -245px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-kh {
+    background-position: -935px -305px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-ke {
+    background-position: -935px -365px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-jp {
+    background-position: -935px -425px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-it {
+    background-position: -935px -485px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-iq {
+    background-position: -935px -545px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-in {
+    background-position: -935px -605px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-id {
+    background-position: -935px -665px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-gr {
+    background-position: -935px -725px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-gq {
+    background-position: -935px -785px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-gn {
+    background-position: -935px -845px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-gm {
+    background-position: -5px -905px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-gh {
+    background-position: -90px -905px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-ge {
+    background-position: -175px -905px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-fr {
+    background-position: -260px -905px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-es {
+    background-position: -345px -905px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-eg {
+    background-position: -430px -905px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-ec {
+    background-position: -515px -905px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-dz {
+    background-position: -600px -905px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-dj {
+    background-position: -685px -905px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-cz {
+    background-position: -770px -905px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-co {
+    background-position: -855px -905px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-cn {
+    background-position: -1020px -5px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-cm {
+    background-position: -1020px -65px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-cl {
+    background-position: -1020px -125px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-ci {
+    background-position: -1020px -185px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-cg {
+    background-position: -1020px -245px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-cf {
+    background-position: -1020px -305px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-bz {
+    background-position: -1020px -365px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-bw {
+    background-position: -1020px -425px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-bt {
+    background-position: -1020px -485px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-bj {
+    background-position: -1020px -545px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-bf {
+    background-position: -1020px -605px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-bb {
+    background-position: -1020px -665px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-at {
+    background-position: -1020px -725px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-ao {
+    background-position: -1020px -785px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-ag {
+    background-position: -1020px -845px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-af {
+    background-position: -1020px -905px;
+    width: 75px;
+    height: 50px;
+}
+
+.sprite-flags100-bo {
+    background-position: -5px -965px;
+    width: 73px;
+    height: 50px;
+}
+
+.sprite-flags100-br {
+    background-position: -88px -965px;
+    width: 71px;
+    height: 50px;
+}
+
+.sprite-flags100-ad {
+    background-position: -169px -965px;
+    width: 71px;
+    height: 50px;
+}
+
+.sprite-flags100-al {
+    background-position: -770px -725px;
+    width: 70px;
+    height: 50px;
+}
+
+.sprite-flags100-no {
+    background-position: -770px -785px;
+    width: 69px;
+    height: 50px;
+}
+
+.sprite-flags100-is {
+    background-position: -855px -845px;
+    width: 69px;
+    height: 50px;
+}
+
+.sprite-flags100-il {
+    background-position: -940px -905px;
+    width: 69px;
+    height: 50px;
+}
+
+.sprite-flags100-sm {
+    background-position: -250px -965px;
+    width: 67px;
+    height: 50px;
+}
+
+.sprite-flags100-pg {
+    background-position: -327px -965px;
+    width: 67px;
+    height: 50px;
+}
+
+.sprite-flags100-ga {
+    background-position: -404px -965px;
+    width: 67px;
+    height: 50px;
+}
+
+.sprite-flags100-cd {
+    background-position: -481px -965px;
+    width: 67px;
+    height: 50px;
+}
+
+.sprite-flags100-dk {
+    background-position: -558px -965px;
+    width: 66px;
+    height: 50px;
+}
+
+.sprite-flags100-mc {
+    background-position: -634px -965px;
+    width: 63px;
+    height: 50px;
+}
+
+.sprite-flags100-ne {
+    background-position: -707px -965px;
+    width: 58px;
+    height: 50px;
+}
+
+.sprite-flags100-np {
+    background-position: -605px -605px;
+    width: 41px;
+    height: 50px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.0),
+screen and (min--moz-device-pixel-ratio: 1.0),
+screen and (-o-min-device-pixel-ratio: 100/100),
+screen and (min-device-pixel-ratio: 1.0),
+screen and (min-resolution: 1.0dppx) {
+    .sprite-flags100-zw,
+    .sprite-flags100-ws,
+    .sprite-flags100-va,
+    .sprite-flags100-uz,
+    .sprite-flags100-tv,
+    .sprite-flags100-to,
+    .sprite-flags100-tl,
+    .sprite-flags100-tj,
+    .sprite-flags100-st,
+    .sprite-flags100-ss,
+    .sprite-flags100-si,
+    .sprite-flags100-sd,
+    .sprite-flags100-sc,
+    .sprite-flags100-sb,
+    .sprite-flags100-qa,
+    .sprite-flags100-ps,
+    .sprite-flags100-ph,
+    .sprite-flags100-om,
+    .sprite-flags100-nz,
+    .sprite-flags100-nr,
+    .sprite-flags100-ng,
+    .sprite-flags100-my,
+    .sprite-flags100-mn,
+    .sprite-flags100-mk,
+    .sprite-flags100-me,
+    .sprite-flags100-md,
+    .sprite-flags100-ly,
+    .sprite-flags100-lv,
+    .sprite-flags100-lk,
+    .sprite-flags100-lc,
+    .sprite-flags100-kz,
+    .sprite-flags100-kw,
+    .sprite-flags100-kp,
+    .sprite-flags100-ki,
+    .sprite-flags100-jo,
+    .sprite-flags100-jm,
+    .sprite-flags100-ie,
+    .sprite-flags100-hu,
+    .sprite-flags100-hr,
+    .sprite-flags100-hn,
+    .sprite-flags100-gw,
+    .sprite-flags100-gb,
+    .sprite-flags100-fj,
+    .sprite-flags100-et,
+    .sprite-flags100-er,
+    .sprite-flags100-dm,
+    .sprite-flags100-cu,
+    .sprite-flags100-ch,
+    .sprite-flags100-ca,
+    .sprite-flags100-by,
+    .sprite-flags100-bs,
+    .sprite-flags100-bn,
+    .sprite-flags100-be,
+    .sprite-flags100-ba,
+    .sprite-flags100-az,
+    .sprite-flags100-au,
+    .sprite-flags100-am,
+    .sprite-flags100-ae,
+    .sprite-flags100-us,
+    .sprite-flags100-mh,
+    .sprite-flags100-lr,
+    .sprite-flags100-fm,
+    .sprite-flags100-sv,
+    .sprite-flags100-mx,
+    .sprite-flags100-ir,
+    .sprite-flags100-cv,
+    .sprite-flags100-vu,
+    .sprite-flags100-tt,
+    .sprite-flags100-py,
+    .sprite-flags100-ni,
+    .sprite-flags100-lu,
+    .sprite-flags100-lt,
+    .sprite-flags100-li,
+    .sprite-flags100-km,
+    .sprite-flags100-kg,
+    .sprite-flags100-ht,
+    .sprite-flags100-gy,
+    .sprite-flags100-gd,
+    .sprite-flags100-de,
+    .sprite-flags100-cy,
+    .sprite-flags100-cr,
+    .sprite-flags100-bi,
+    .sprite-flags100-bh,
+    .sprite-flags100-bg,
+    .sprite-flags100-bd,
+    .sprite-flags100-fi,
+    .sprite-flags100-tg,
+    .sprite-flags100-se,
+    .sprite-flags100-pw,
+    .sprite-flags100-pl,
+    .sprite-flags100-gt,
+    .sprite-flags100-do,
+    .sprite-flags100-ee,
+    .sprite-flags100-ar,
+    .sprite-flags100-zm,
+    .sprite-flags100-za,
+    .sprite-flags100-ye,
+    .sprite-flags100-vn,
+    .sprite-flags100-ve,
+    .sprite-flags100-vc,
+    .sprite-flags100-uy,
+    .sprite-flags100-unesco,
+    .sprite-flags100-ug,
+    .sprite-flags100-ua,
+    .sprite-flags100-tz,
+    .sprite-flags100-tr,
+    .sprite-flags100-tn,
+    .sprite-flags100-tm,
+    .sprite-flags100-th,
+    .sprite-flags100-td,
+    .sprite-flags100-sz,
+    .sprite-flags100-sy,
+    .sprite-flags100-sr,
+    .sprite-flags100-so,
+    .sprite-flags100-sn,
+    .sprite-flags100-sl,
+    .sprite-flags100-sk,
+    .sprite-flags100-sg,
+    .sprite-flags100-sa,
+    .sprite-flags100-rw,
+    .sprite-flags100-ru,
+    .sprite-flags100-rs,
+    .sprite-flags100-ro,
+    .sprite-flags100-pt,
+    .sprite-flags100-pk,
+    .sprite-flags100-pe,
+    .sprite-flags100-pa,
+    .sprite-flags100-nl,
+    .sprite-flags100-na,
+    .sprite-flags100-mz,
+    .sprite-flags100-mw,
+    .sprite-flags100-mv,
+    .sprite-flags100-mu,
+    .sprite-flags100-mt,
+    .sprite-flags100-mr,
+    .sprite-flags100-mm,
+    .sprite-flags100-ml,
+    .sprite-flags100-mg,
+    .sprite-flags100-ma,
+    .sprite-flags100-ls,
+    .sprite-flags100-lb,
+    .sprite-flags100-la,
+    .sprite-flags100-kr,
+    .sprite-flags100-kn,
+    .sprite-flags100-kh,
+    .sprite-flags100-ke,
+    .sprite-flags100-jp,
+    .sprite-flags100-it,
+    .sprite-flags100-iq,
+    .sprite-flags100-in,
+    .sprite-flags100-id,
+    .sprite-flags100-gr,
+    .sprite-flags100-gq,
+    .sprite-flags100-gn,
+    .sprite-flags100-gm,
+    .sprite-flags100-gh,
+    .sprite-flags100-ge,
+    .sprite-flags100-fr,
+    .sprite-flags100-es,
+    .sprite-flags100-eg,
+    .sprite-flags100-ec,
+    .sprite-flags100-dz,
+    .sprite-flags100-dj,
+    .sprite-flags100-cz,
+    .sprite-flags100-co,
+    .sprite-flags100-cn,
+    .sprite-flags100-cm,
+    .sprite-flags100-cl,
+    .sprite-flags100-ci,
+    .sprite-flags100-cg,
+    .sprite-flags100-cf,
+    .sprite-flags100-bz,
+    .sprite-flags100-bw,
+    .sprite-flags100-bt,
+    .sprite-flags100-bj,
+    .sprite-flags100-bf,
+    .sprite-flags100-bb,
+    .sprite-flags100-at,
+    .sprite-flags100-ao,
+    .sprite-flags100-ag,
+    .sprite-flags100-af,
+    .sprite-flags100-bo,
+    .sprite-flags100-br,
+    .sprite-flags100-ad,
+    .sprite-flags100-al,
+    .sprite-flags100-no,
+    .sprite-flags100-is,
+    .sprite-flags100-il,
+    .sprite-flags100-sm,
+    .sprite-flags100-pg,
+    .sprite-flags100-ga,
+    .sprite-flags100-cd,
+    .sprite-flags100-dk,
+    .sprite-flags100-mc,
+    .sprite-flags100-ne,
+    .sprite-flags100-np {
+        background-image: url('../images/flags100.png');
+        -webkit-background-size: 1100px 1020px;
+        -moz-background-size: 1100px 1020px;
+        background-size: 1100px 1020px;
+    }
+}

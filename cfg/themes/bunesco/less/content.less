@@ -1,0 +1,757 @@
+/* ------------------------------------------------------------- 
+Most global styles
+---------------------------------------------------------------- */
+body {
+  background: @body-bg-color; // must be a variable
+  font-family: @font-family-base;
+  &.admin-menu { // fix for ckeditor links when using admin menu (submit PATCH)
+    .main-container {
+      .cke_editor a {
+        margin-top: 0;
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+.white-well {
+  background: white;
+  border-radius: 5px;
+  .box-shadow(0 2px 2px 0 #bbb);
+  margin-bottom: @grid-gutter-width;
+  padding: 10px;
+  position: relative;
+  &.well-xs {
+    padding: 15px;
+  }
+}
+
+.subtheme.white-well { // TODO: font-size:13px, line-height: 16px
+  .clearfix;
+  margin-bottom: 8px;
+  padding: 5px;
+  text-align: left;
+  @media(min-width:@screen-sm-min) and (max-width: @screen-md-min) {
+    text-align: center;
+  }
+  
+  .media {
+    float: left;
+    margin-right: 15px;
+    @media(min-width:@screen-sm-min) and (max-width: @screen-md-min) {
+      float: none;
+      margin-right: 0;
+    }
+  }
+  
+  .title {
+    @media(min-width: @screen-md-min) {
+      float: left;
+      width: 45%;
+    }
+    a {
+      color: @base-color-darker;
+      font-size: @font-size-small;
+      font-weight: bold;
+    }
+  }
+}
+
+h1#page-title {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding-top: 0;
+  text-align: center;
+  z-index: 0; 
+}
+
+h2.block-title {
+  border-bottom: 1px solid @brand-primary;
+  color: @brand-primary;
+  font: bold 13px Arial,Helvetica,"Nimbus Sans L",sans-serif;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.region-sidebar-second h2.block-title {
+  text-align: center;
+}
+
+
+.view-id-events.view-display-id-block_1 { // temporary
+  .view-header { 
+    font-size: @font-size-small;
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    a {
+      color: @base-color-darker;
+    }
+  }
+}
+
+.view-id-news.view-display-id-front_news_block { // temporary
+  .more-link {
+    font-size: @font-size-small;
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    a {
+      color: @base-color-darker;
+    }
+  }
+}
+
+.small-list ul {
+  padding-left: 16px;
+  li {
+    font-size: 13px;
+    margin-bottom: 10px;
+    &.views-row-last,
+    &.last {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* ------------------------------------------------------------- 
+ Styles for a generic content listing, such as news, events.
+ Apply the following classes in your view 
+---------------------------------------------------------------- */
+
+.views-generic-listing {
+  .views-row {
+    border-bottom: 1px solid #7a7a7a;
+    padding: 10px 0;
+  }
+
+  .views-row.views-row-last {
+    border-bottom: none;
+  }
+
+  .title a {
+    color: @top-bg-color; // must be equivalent to header-wrapper color
+    font-weight: bold;
+  }
+
+  .read-more {
+    text-align: right;
+  }
+
+  .read-more a {
+    font-weight: bold;
+  }
+}
+
+/* -------------------------------------------------------  
+Styles for content listing in blocks - Apply in your view 
+----------------------------------------------------------*/
+
+.views-block-listing-highlight {
+
+}
+
+.views-block-listing {
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .views-row {
+    min-height: 70px;
+    list-style: none inside;
+    padding: 10px 0;
+    border-bottom: 1px solid #7A7A7A; // must be variable?
+    .when, .where {
+      color: @base-color;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+    .title {
+      a {
+        text-decoration: none;
+        color: @base-color-darker;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .with-media-vertical {
+    border-bottom: 1px solid #7A7A7A; // must be variable?
+    text-align: center;
+    @media (min-width: @screen-sm-min) {
+      text-align: left;
+    }
+    .views-row-first {
+      padding-top: 0;
+    }
+  }
+
+  .with-media-horizontal {
+    border-bottom: 1px solid #7A7A7A; // must be variable?
+    .views-row {
+      > div {
+        display: inline-block;
+        @media(min-width: @screen-lg-min) {
+          max-width: 160px;
+        }
+        vertical-align: top;
+        &:first-child {
+          margin-right: 3px;
+          display: none;
+          @media(min-width: @screen-lg-min) {
+            display: inline-block;
+          }
+        }
+        @media(max-width: @screen-lg-min) {
+          .when {
+            display: inline-block;
+            &::after {
+              content: '-';
+              margin-left: 5px;
+            }
+          }
+          .where {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  &.with-attachement {
+    .attachment-before {
+      @media(min-width: @screen-sm-min) {
+        float: left;
+        vertical-align: top;
+        width: 48%;
+      }
+    }
+    > .attachment-before + .view-content {
+      @media(min-width: @screen-sm-min) {
+        float: right;
+        width: 50%;
+      }
+    }
+  }
+
+  &.hide-attachement {
+    .attachment-before {
+      display: none;
+    }
+  }
+
+  .views-row.views-row-first {
+  //  border-top: 1px solid #7A7A7A; need to think about that
+  }
+
+  .views-row.views-row-last {
+    border-bottom: none;
+  }
+}
+
+/* ---------------------------------------------------------------------
+Styles for content listing in blocks with TOP IMAGE - Apply in your view
+------------------------------------------------------------------------ */
+
+.views-block-publication-horizontal {
+  .views-row {
+    float: left;
+    text-align: center;
+    width: 25%;
+    padding-top: 10px;
+      .media {
+        height: 150px;
+        position: relative;
+      }
+      .title {
+      a {
+        text-decoration: none;
+        color: @base-color-darker;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+aside[role=complementary] iframe[src~=youtube] {
+  width: 100%;
+}
+
+.sharethis-buttons {
+  text-align: right;
+  margin-top: 1.2em;
+}
+
+/* ---------------------------------------------------------------------
+Styles for content listing in blocks with LEFT SIDE IMAGE - Apply in your view
+------------------------------------------------------------------------ */
+
+.views-block-publication-vertical {
+  .views-row {
+    border-bottom: 1px solid #7A7A7A; // must be variable?
+    padding: 10px 0;
+    @media(min-width: @screen-sm-min) and (max-width: @screen-lg-min) {
+      text-align: center; 
+    }
+      > div {
+        display: inline-block;
+        max-width: 60%;
+        @media(min-width: @screen-sm-min) {
+          max-width: 100px; 
+        }
+        vertical-align: top;
+        &:first-child {
+          margin-right: 3px;
+        }
+      }
+      .media {
+        position: relative;
+      }
+      .title {
+      a {
+        text-decoration: none;
+        color: #212121; // must be variable?
+        font-size: @font-size-small;
+        font-weight: bold;
+      }
+    }
+    &.views-row-last{
+      border-bottom: none;
+    }
+  }
+}
+
+/* --------------------------------------------------------------
+Style for gallery blocks - works for video and photo galleries
+-----------------------------------------------------------------*/
+
+.views-block-gallery {
+
+  .media {
+    margin-bottom: 10px;
+    position: relative;
+
+      a {
+        color: #a8a8a8; // grey-light or similar
+        font-weight: bold;
+        font-size: @font-size-small;
+      }
+
+      .field-name-field-title {
+        background: none repeat scroll 0 0 #000000;
+        display: block;
+        opacity: 0.9;
+        padding: 10px 0 5px;
+        position: absolute;
+        text-indent: 5px;
+        width: 100%;
+        top: 0;
+      }
+
+      .field-name-field-caption {
+        background: none repeat scroll 0 0 #000000;
+        bottom: 0;
+        display: block;
+        opacity: 0.9;
+        padding: 10px 0 5px;
+        position: absolute;
+        text-indent: 5px;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .field-name-field-copy {
+        bottom: 5px;
+        color: #FFFFFF;
+        display: block;
+        font-size: 9px;
+        position: absolute;
+        right: 5px;
+        z-index: 0;
+      }
+    }
+  }
+
+.attachment {
+
+  .views-block-gallery {
+    //text-align: center;
+
+    .views-row {
+      display: inline-block;
+      width: 32%;
+
+      .media {
+
+        a {
+          display: block;
+          position: relative;
+        }
+
+        .field-name-field-copy {
+          bottom: 0;
+          color: #FFFFFF;
+          font-size: 9px;
+          position: absolute;
+          right: 4px;
+        }
+
+      }
+    }
+  }
+}
+
+
+.views-block-slideshow .view-footer {
+  font-size: @font-size-small;
+  margin-top: 8px;
+  text-align: right;
+  a{
+    color: @base-color-darker;
+    text-decoration: underline;
+  }
+}
+
+
+/* --------------------------------------------------------------
+Style for slideshows based on JCAROUSEL - Will become DEPRECATED
+-----------------------------------------------------------------*/
+
+.views-block-slideshow .jcarousel-container-horizontal {
+  height: auto;
+  max-height: 332px;
+  margin: auto;
+  max-width: 688px;
+  padding: 0px;
+  width: auto;
+  z-index: 0;
+  a.jcarousel-prev,
+  a.jcarousel-next {
+    display: none;
+  }
+  .jcarousel-clip-horizontal {
+    overflow: hidden;
+    width: 100%;
+    .jcarousel-list-horizontal {
+      li {
+        border: none;
+        height: auto;
+        max-height: 330px;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+        .media {
+          position: relative;
+        }
+        .title {
+          background: black;
+          color: white;
+          position: absolute;
+          width: 100%;
+          bottom: 0px;
+          left: 0;
+          z-index: 2;
+          opacity: 0.9;
+          padding: 10px 0 10px 10px;
+          text-align: left;
+          font: 15px Helvetica,Arial,"Nimbus Sans L",sans-serif;
+          margin: 0;
+          a {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: normal;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .jcarousel-navigation {
+    top: 5px;
+    position: absolute;
+    right: 5px;
+    z-index: 3;
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none inside;
+      a {
+        display: block;
+        float: left;
+        width: 12px;
+        height: 12px;
+        border: 1px solid black;
+        color: white;
+        background-color: #0077D4;
+        span {
+          padding-bottom: 1px;
+          display: none;
+        }
+      }
+      &.active a {
+        background-color: #E67108;
+      }
+    }
+  }
+}
+
+/* ----------------------------------------------------------
+Style for slideshows based on VIEWS SLIDESHOW - New standard
+------------------------------------------------------------- */
+
+// Slider Navigation
+
+.views-block-slideshow .views-slideshow-controls-top {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 10;
+}
+
+.views-block-slideshow .views-slideshow-controls-top .widget_pager {}
+
+.views-block-slideshow  .views-slideshow-controls-top .widget_pager .views-slideshow-pager-field-item {
+  float: left;
+}
+
+.views-block-slideshow .views-slideshow-controls-top .widget_pager .views-slideshow-pager-field-item > div {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+  color: white;
+  background-color: #0077D4;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.views-block-slideshow .views-slideshow-controls-top .widget_pager .views-slideshow-pager-field-item.active > div {
+  background-color: #E67108;
+}
+
+.views-block-slideshow .skin-default {
+  height: auto;
+  margin: auto;
+  max-width: 688px;
+  padding: 0px;
+  position: relative;
+  width: auto;
+  z-index: 0;
+}
+
+.views-block-slideshow .skin-default .views_slideshow_main {
+  overflow: hidden;
+  width: 100%;
+}
+
+.views-slideshow-cycle-main-frame,
+.views-slideshow-cycle-main-frame-row,
+.views-slideshow-cycle-main-frame-row img {
+  width: 100% !important; // BAD Wolf
+}
+
+// Items
+
+.views_slideshow_main .views_slideshow_slide {}
+
+.views_slideshow_main .views_slideshow_slide .media {}
+
+.views-block-slideshow .views_slideshow_main .views_slideshow_slide .title {
+  background: rgba(0,0,0,0.9);
+  bottom: 0px;
+  color: #FFF;  
+  font-family: @font-family-sans-serif;
+  font-size: @font-size-small;
+  @media(min-width: @screen-sm-min) {
+    font-size: 16px;
+  }
+  left: 0;
+  margin: 0;
+  padding: 10px;
+  position: absolute;
+  text-align: left;  
+  z-index: 2;
+  width: 100%;
+}
+
+.views-block-slideshow .views_slideshow_main .views_slideshow_slide .title a {
+  color: #FFF;
+  font-weight: bold;
+  line-height: normal;
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------- 
+Style override for maps block 
+------------------------------------------------------------- */
+
+.leaflet-tile.leaflet-tile-loaded {
+    top: -25px;
+}
+
+/* ----------------------------------------------------------
+Style for sidebar accordion
+------------------------------------------------------------- */
+
+.views-accordion-header {
+  background: #D5D6D4; // set variable
+  font-size: @font-size-small;
+}
+
+#block-views-front-description-block {
+  .block-title {
+    display: none;
+  }
+  .views-row {
+    overflow: hidden;
+  }
+}
+
+.ui-widget {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 1.1em;
+}
+.ui-widget .ui-widget {
+    font-size: 1em;
+}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 1em;
+}
+.ui-widget-content {
+    background: url("images/ui-bg_flat_75_ffffff_40x100.png") repeat-x scroll 50% 50% #FFFFFF;
+    border: 1px solid #AAAAAA;
+    color: #222222;
+}
+.ui-widget-content a {
+  color: @link-color;     
+}
+
+.ui-widget-header {
+    background: url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") repeat-x scroll 50% 50% #CCCCCC;
+    border: 1px solid #AAAAAA;
+    color: #222222;
+    font-weight: bold;
+}
+.ui-widget-header a {
+    color: #222222;
+}
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default {
+  border: 1px solid #D3D3D3;
+  color: #555555; // set variable
+  font-weight: normal;
+}
+.ui-state-default a, 
+.ui-state-default a:link, 
+.ui-state-default a:visited {
+  color: #555555; // set variable
+  text-decoration: none;
+}
+.ui-state-hover, 
+.ui-widget-content .ui-state-hover, 
+.ui-widget-header .ui-state-hover, 
+.ui-state-focus, 
+.ui-widget-content .ui-state-focus, 
+.ui-widget-header .ui-state-focus {
+  background: #D5D6D4; // set variable
+  border: 1px solid #999999;
+  color: #212121; // set variable
+  font-weight: normal;
+}
+.ui-state-hover a, .ui-state-hover a:hover {
+  color: #212121;
+  text-decoration: none;
+}
+.ui-state-active, 
+.ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active {
+    border: 1px solid #AAAAAA;
+    color: #212121;
+    font-weight: normal;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+    color: #212121;
+    text-decoration: none;
+}
+.ui-widget *:active {
+    outline: medium none;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    background: url("images/ui-bg_glass_55_fbf9ee_1x400.png") repeat-x scroll 50% 50% #FBF9EE;
+    border: 1px solid #FCEFA1;
+    color: #363636;
+}
+.ui-state-highlight a, .ui-widget-content .ui-state-highlight a, .ui-widget-header .ui-state-highlight a {
+    color: #363636;
+}
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
+    background: url("images/ui-bg_glass_95_fef1ec_1x400.png") repeat-x scroll 50% 50% #FEF1EC;
+    border: 1px solid #CD0A0A;
+    color: #CD0A0A;
+}
+.ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a {
+    color: #CD0A0A;
+}
+.ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text {
+    color: #CD0A0A;
+}
+.ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary {
+    font-weight: bold;
+}
+.ui-priority-secondary, .ui-widget-content .ui-priority-secondary, .ui-widget-header .ui-priority-secondary {
+    font-weight: normal;
+    opacity: 0.7;
+}
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled {
+    background-image: none;
+    opacity: 0.35;
+}
+.ui-icon {}
+
+
+/* Inner accordion content */
+
+.ui-accordion .ui-accordion-content {
+  .box-sizing(content-box);
+  
+  @media(min-width: @screen-sm-min) {
+    padding: 0.4em 0.6em;
+  }
+  @media(min-width: @screen-md-min) {
+    padding: 1em 2.2em
+  }
+}
+
+.ui-accordion-content .body {
+  display: block;
+  font-size: @font-size-small;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.ui-accordion-content .media {
+  position: relative;
+  text-align: center;  
+  .field.field-name-field-caption {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+    bottom: 0;
+    font-size: @font-size-small;
+    left: 0;
+    padding: 5px 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 3;
+    a {
+      color: @blue-dark;
+    }
+  }
+}
+

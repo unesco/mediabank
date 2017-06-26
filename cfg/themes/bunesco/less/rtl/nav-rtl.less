@@ -1,0 +1,168 @@
+// This file holds styles for the site navigation
+
+// Main Menu
+
+#header-navigation ul.nav li {
+  border-right: 1px solid @top-bg-color;
+}
+
+#header-navigation ul.nav li.last {
+  border-right: 0;
+}
+
+#header-navigation ul.nav a {
+  background: url('../img/menu-icons.png') no-repeat left;
+  color: @navbar-default-link-color;
+  font-size: @font-size-small;
+  padding: 11px 10px 11px 30px;
+  @media(min-width: @screen-sm-min) {
+    padding: 11px 10px 11px 21px;
+  }
+  @media(min-width: @screen-md-min) {
+    font-size: @font-size-base;
+    padding: 11px 25px 11px 30px;
+  }
+  text-shadow: #333 1px 1px 0px;
+  text-transform: uppercase;
+}
+
+.i18n-ru #header-navigation ul.nav a {
+  @media(min-width: @screen-md-min) {
+    padding: 11px 10px 11px 20px;
+    font-size: 13px; // must be variable
+  }
+}
+
+#header-navigation ul.nav a .caret {
+  display: none;
+}
+
+#header-navigation ul.nav li:hover,
+#header-navigation ul.nav li:focus {
+  background: url("../img/menu-hover.png") no-repeat scroll 50% bottom rgba(0, 0, 0, 0.2);
+}
+
+// Menu icons
+
+#header-navigation ul.nav a {
+  &#info { 
+    background-position: 0 0;
+  }
+  &#hand { 
+    background-position: 0 -43px;
+  } 
+  &#handshake {
+    background-position: 0 -83px;
+  } 
+  &#news {
+    background-position: 0 -128px;
+  } 
+  &#globe {
+    background-position: 0 -169px;
+  } 
+  &#books {
+    background-position: 0 -210px;
+  } 
+  &#folder {
+    background-position: 0 -255px;
+  }
+}
+
+// Override navbar-default styles
+
+.navbar-clean {
+  background-color: @navbar-default-bg;
+  border-color: @navbar-default-border;
+  &.navbar-inverse {
+    background-color: @navbar-inverse-bg;
+  }
+  @media(min-width: @screen-sm-min) {
+    background: none;
+    border-color: none;
+    border-width: 0;
+  }
+}
+
+#main-navbar {
+  @media(min-width: @screen-sm-min) {
+    padding-left: 0;
+  }
+}
+
+// Override default navbar dropdown menu
+
+#header-navigation .navbar-nav {
+  > li {
+    &.first {
+      > .dropdown-menu {
+        min-width: 260px;
+      }
+    }
+    &.last {
+      > .dropdown-menu {
+        right: 0;
+        left: auto;
+      }
+    }
+    > .dropdown-menu {
+        background: @dropdown-bg;
+        border-radius: 0;
+        .box-shadow(none);
+        min-width: 253px;
+        @media (min-width: @screen-sm-min) and (max-width: @screen-md-min) {
+          min-width: 185px;
+        }
+        li {
+          border-right: none;
+          height: auto;
+          padding: 0 0 0 10px;
+          width: auto;
+          &:hover {
+            background: none;
+          }
+          span {
+            color: @brand-primary;
+          }
+
+          a {
+            background: url('../img/menu-arrow-rtl.png') no-repeat 0 center;
+            border: 1px solid @dropdown-bg;
+            color: @dropdown-link-color;
+            display: block;
+            font-size: 13px;
+            height: auto;
+            line-height: 20px;
+            padding: 0 10px 0 25px;
+            // text-align: left;
+		float: right;
+            text-transform: none;
+            text-shadow: none;
+            &:hover {
+              background: url('../img/menu-arrow-rtl.png') no-repeat 0 center;
+              border: 1px solid darken(@dropdown-bg, 19%);
+            }
+            // Icons for resources menu
+            &.resources {
+              background: url('../img/menu-resources.gif') no-repeat 0 center;
+              padding: 0.7em 0.5em 0.7em 40px;
+            }
+            &#bookshop {
+              background-position: 0 -260px;
+            }
+            &#conventions {
+              background-position: 0 -130px;
+            }
+            &#media-services {
+              background-position: 0 -70px;
+            }
+            &#multimedia {
+              background-position: 0 0;
+            }
+            &#statistics {
+              background-position: 0 -200px;
+            }
+          }
+        }
+    }
+  }
+}

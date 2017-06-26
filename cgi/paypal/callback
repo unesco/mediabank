@@ -1,0 +1,113 @@
+use Business::PayPal::IPN;
+use Date::Parse;
+use EPrints;
+use JSON;
+use strict;
+
+my $eprints = EPrints->new;
+my $repo = $eprints->current_repository;
+exit( 0 ) unless( defined $repo );
+
+my $ua = new LWP::UserAgent;
+$ua->timeout(10);
+$ua->env_proxy;
+
+if ( $repo->config( "proxy" )){
+	$ua->proxy(['http', 'https', 'ftp'], $repo->config( "proxy" ));
+}
+
+# use sandbox
+$Business::PayPal::IPN::GTW = 'https://ipnpb.sandbox.paypal.com/cgi-bin/webscr';
+
+my $ipn = new Business::PayPal::IPN(ua => $ua) or die Business::PayPal::IPN->error();
+
+unless( $ipn->completed ) {
+	&log( "received incomplete txn" );
+	exit;
+}
+
+# respond to paypal
+print $ipn->cgi->header('text/plain');
+
+# check the receiver_email
+unless( $ipn->receiver_email eq $repo->config( qw( paypal merchantid ) ) )
+{
+	&log( "bad receiver email in txn: " . $ipn->receiver_email );
+	exit;
+}
+
+# check its a transaction we expect (shopping cart transaction)
+unless( $ipn->txn_type eq "cart" )
+{
+	&log( "bad txn_type in txn: " . $ipn->txn_type );
+	exit;
+}
+
+# check that this transaction has not already been processed
+my $list = $repo->dataset( "paypal_order" )->search(
+	filters => [
+		{ meta_fields => [qw( txn_id )], value => $ipn->txn_id, match => "EX" }
+	]
+);
+if( $list->count )
+{
+	&log( "duplicate ipn for txn" );
+	exit;
+}
+
+# check for valid userid
+unless( EPrints::Utils::is_set( $ipn->custom ) && defined $repo->dataset( "user" )->dataobj( $ipn->custom ) )
+{
+	&log( "invalid userid in custom field" );
+	exit;
+}
+
+# TODO check that payment amount and currency are correct
+# foreach item, check mc_gross_x
+
+my %ipndata = $ipn->vars;
+
+my %epdata;
+foreach my $field ( $repo->dataset( "paypal_order" )->fields )
+{
+	my $name = $field->name;
+	next unless EPrints::Utils::is_set( $ipndata{$name} );
+
+	if( $name eq "payment_date" )
+	{
+		$epdata{payment_date} = EPrints::Time::iso_datetime( str2time( $ipn->payment_date ) );
+		next;
+	}
+
+	$epdata{$name} = $ipndata{$name};
+}
+
+$epdata{_raw} = to_json( \%ipndata );
+$epdata{userid} = $ipn->custom;
+
+my @items;
+for( 1..$ipn->num_cart_items )
+{
+	next unless $ipndata{"item_number$_"} =~ /([0-9]+)$/;
+	push @items, {
+		document => $1,
+		name => $ipndata{"item_name$_"},
+		number => $ipndata{"item_number$_"},
+		gross => $ipndata{"mc_gross_$_"},
+	}
+}
+$epdata{items} = \@items;
+
+my $order = $repo->dataset( "paypal_order" )->create_dataobj( \%epdata );
+unless( defined $order )
+{
+	&log( "failed to create paypal_order dataobj" );
+	exit;
+}
+
+$order->commit;
+
+sub log
+{
+	$repo->log( sprintf( "paypal (txn_id %s): %s", $ipn->txn_id, $_[0] ) );
+}

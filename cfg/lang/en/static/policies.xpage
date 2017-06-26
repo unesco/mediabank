@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE page SYSTEM "entities.dtd" >
+<xpage:page xmlns="http://www.w3.org/1999/xhtml" xmlns:xpage="http://eprints.org/ep3/xpage" xmlns:epc="http://eprints.org/ep3/control">
+<xpage:title>Repository Policies</xpage:title>
+<xpage:body>
+
+<p>The "<epc:phrase ref="archive_name" />" web site is the property of UNESCO.</p>
+<p>All photographs and other elements of the "<epc:phrase ref="archive_name" />" website are protected by international treaties on intellectual property and other applicable laws. The "<epc:phrase ref="archive_name" />" site and the elements it displays may not be copied or retransmitted by any means without explicit authorisation from UNESCO.</p>
+<p>All photographs shown on this site are the exclusive or non-exclusive property of UNESCO or of third parties, copyright holders, who authorize UNESCO to distribute them.</p>
+<p>Interested potential users who wish to obtain an authorisation to reproduce the photographs on "<epc:phrase ref="archive_name" />", in low resolution (72 dpi) or in high resolution (300 dpi), must fill out and email an "order basket" stating their name(s), the name of the organisation or the company for which they are making the order, their address, their email address and the intended use of the photographs.</p>
+<p>Any reproduction permission granted by UNESCO will be valid only for the use stated in the email of the "order basket". Other use of any or all photographs in the "order basket" requires a separate request for authorization from UNESCO (email: photobank@unesco.org). This permission may not under any circumstances be transferred to a third party.</p>
+<p>The person, company or organisation that has received via mail or email the permission to reproduce photos of UNESCO's "<epc:phrase ref="archive_name" />" must mention the obligatory copyright notice ©UNESCO/photographer's name with each photo.</p>
+<p>"<epc:phrase ref="archive_name" />" users authorized to publish photos that they have entered into their "order basket" agree not to use the photographs for a purpose contrary to human dignity and respect.</p>
+<p>UNESCO reserves the right to refuse or to revoke the authorization for the use of "<epc:phrase ref="archive_name" />" photos if it deems that this use is contrary to its constitution or if a user does not respect the terms of use.</p>
+<p>UNESCO's "<epc:phrase ref="archive_name" />" is a collection of photographs commenced shortly after the creation of UNESCO in 1945. Neither individual photographs, the entire collection nor the manner in which they appear on the screen can be considered to represent an official position taken by UNESCO.</p>
+
+</xpage:body>
+</xpage:page>

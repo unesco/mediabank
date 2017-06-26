@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+    <cite:citation xmlns="http://www.w3.org/1999/xhtml" xmlns:cite="http://eprints.org/ep3/citation" xmlns:epc="http://eprints.org/ep3/control">
+        <epc:set name='docs' expr='$item.original_documents()'>
+            <epc:if test="length($docs) gt 0">
+                <epc:foreach expr="$docs" iterator="doc" limit="1">
+                    <div class="thumbnail">
+                        <epc:set name='covers' expr='$item.cover_image()'>
+                            <epc:if test="length($covers) gt 0">
+                                <epc:foreach expr="$covers" iterator="cover" limit="1">
+                                    <cite:linkhere><img src="{$cover.thumbnail_url('small')}" class="img-rounded img-responsive" /> </cite:linkhere>
+                                </epc:foreach>
+                            </epc:if>
+                            <epc:if test="!is_set($covers)">
+                                <cite:linkhere><img src="{$doc.thumbnail_url('small')}" class="img-rounded img-responsive" /> </cite:linkhere>
+                            </epc:if>
+                        </epc:set>
+                        <div class="caption">
+                            <epc:choose>
+                                <epc:when test="type = 'article'">
+                                    <h4><i class="fa fa-paperclip" aria-hidden="true">  </i> Document</h4></epc:when>
+                                <epc:when test="type = 'audio'">
+                                    <h4><i class="fa fa-music" aria-hidden="true"> </i> Audio</h4></epc:when>
+                                <epc:when test="type = 'book'">
+                                    <h4><i class="fa fa-book" aria-hidden="true"> </i> Book</h4></epc:when>
+                                <epc:when test="type = 'image'">
+                                    <h4><i class="fa fa-picture-o" aria-hidden="true"> </i> Image</h4></epc:when>
+                                <epc:when test="type = 'video'">
+                                    <h4><i class="fa fa-video-camera" aria-hidden="true"> </i> Video</h4></epc:when>
+                                <epc:otherwise>
+                                    <h4><i class="fa fa-file-archive-o" aria-hidden="true">  </i> Archive</h4></epc:otherwise>
+                            </epc:choose>
+                            <epc:choose>
+                                <epc:when test="strlen(title) gt 20">
+                                    <h3><cite:linkhere><epc:print expr="substr(title,0,20)" />&#8230;</cite:linkhere></h3> </epc:when>
+                                <epc:otherwise>
+                                    <h3><cite:linkhere><epc:print expr="title" /></cite:linkhere></h3> </epc:otherwise>
+                            </epc:choose>
+                            <epc:if test="is_set(date)">
+                                <epc:print expr="substr(date.as_string(),0,4)" /></epc:if>
+                            <epc:if test="is_set(creators_name)">
+                                <epc:choose>
+                                    <epc:when test="length(creators_name) gt 0">
+                                        <epc:set name="creators" expr="creators_name" limit="1">
+                                            <epc:foreach expr="$creators" iterator="creator">
+                                                <epc:choose>
+                                                    <epc:when test="strlen($creator) gt 20">
+                                                        <h3><cite:linkhere><epc:print expr="substr($creator,0,20)" />&#8230;</cite:linkhere></h3> </epc:when>
+                                                    <epc:when test="strlen($creator) lt 5">
+                                                        <h3><cite:linkhere>&#8194;</cite:linkhere></h3> </epc:when>
+                                                    <epc:otherwise>
+                                                        <h3><cite:linkhere><epc:print expr="$creator" /></cite:linkhere></h3> </epc:otherwise>
+                                                </epc:choose>
+                                            </epc:foreach>
+                                        </epc:set>
+                                    </epc:when>
+                                </epc:choose>
+                            </epc:if>
+                        </div>
+                    </div>
+                </epc:foreach>
+            </epc:if>
+        </epc:set>
+    </cite:citation>

@@ -1,0 +1,8 @@
+# types for eprint 
+
+article
+audio
+book
+image
+video
+other

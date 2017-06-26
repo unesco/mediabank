@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+    <!DOCTYPE phrases SYSTEM "entities.dtd">
+    <epp:phrases xmlns="http://www.w3.org/1999/xhtml" xmlns:epp="http://eprints.org/ep3/phrase" xmlns:epc="http://eprints.org/ep3/control">
+        <epp:phrase id="Plugin/Screen/PaypalCart:title">Paypal Checkout</epp:phrase>
+        <epp:phrase id="Plugin/Screen/PaypalCart:btn">
+            <form name="_xclick" target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_cart" />
+                <input type="hidden" name="business" value="{$config{paypal}{merchantid}}" />
+                <input type="submit" name="submit" value="Check cart" />
+                <input type="hidden" name="display" value="1" /> </form>
+        </epp:phrase>
+        <epp:phrase id="paypal_currency_GBP">£</epp:phrase>
+        <epp:phrase id="paypal_currency_USD">$</epp:phrase>
+        <epp:phrase id="paypal_currency_EUR">€</epp:phrase>
+        <epp:phrase id="security_typename_paypal">Purchases only</epp:phrase>
+        <epp:phrase id="Plugin/Screen/PaypalOrders:title">Paypal Orders</epp:phrase>
+        <epp:phrase id="datasetname_paypal_order">Paypal Orders</epp:phrase>
+        <epp:phrase id="datasethelp_paypal_order">List all paypal orders</epp:phrase>
+        <epp:phrase id="paypal_order_fieldname_txn_id">Transaction ID</epp:phrase>
+        <epp:phrase id="paypal_order_fieldname_payment_date">Date</epp:phrase>
+        <epp:phrase id="paypal_order_fieldname_num_cart_items">Items ordered</epp:phrase>
+        <epp:phrase id="paypal_order_fieldname_mc_gross">Order total</epp:phrase>
+        <epp:phrase id="paypal_order_fieldname_mc_currency">Currency</epp:phrase>
+        <epp:phrase id="paypal_order_fieldname_items">Items</epp:phrase>
+        <epp:phrase id="paypal_order_fieldname_items_name">Name</epp:phrase>
+        <epp:phrase id="paypal_order_fieldname_items_number">ID</epp:phrase>
+        <epp:phrase id="paypal_order_fieldname_items_gross">Price</epp:phrase>
+        <epp:phrase id="paypal_order_fieldname_items_document">Download</epp:phrase>
+        <epp:phrase id="paypal_order_fieldname_payer_email">Buyer ID</epp:phrase>
+        <epp:phrase id="paypal_order_fieldname_userid">User</epp:phrase>
+        <epp:phrase id="paypal_order_fieldname__raw">Callback data</epp:phrase>
+</epp:phrases>

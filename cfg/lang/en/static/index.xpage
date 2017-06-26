@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no" ?>
+    <!DOCTYPE page SYSTEM "entities.dtd" >
+    <xpage:page xmlns="http://www.w3.org/1999/xhtml" xmlns:xpage="http://eprints.org/ep3/xpage" xmlns:epc="http://eprints.org/ep3/control">
+        <xpage:head>
+            <link rel="alternate" type="application/rss+xml" title="Items in {phrase('archive_name')}" href="{$config{http_root}}/latest_tool?output=RSS2"></link>
+            <link rel="alternate" type="application/atom+xml" title="Items in {phrase('archive_name')}" href="{$config{http_root}}/latest_tool?output=Atom"></link>
+            <link rel="alternate" type="application/rdf+xml" title="Repository Summary RDF+XML" href="{$config{http_root}}/export/repository/RDFXML/devel.rdf"></link>
+            <link rel="alternate" type="text/n3" title="Repository Summary RDF+N3" href="{$config{http_root}}/export/repository/RDFN3/devel.n3"></link>
+        </xpage:head>
+        <xpage:title></xpage:title>
+        <xpage:body>
+            <section class="homepage-media-modules module full-bleed">
+                <h2 class="h2">Great stories start here.</h2>
+                <div class="row-offset">
+                    <div class="media-module-wrap flex-row row row-tight clearfix">
+                        <div class="media-module photos col-xs-4 margin-bottom">
+                            <a href="{$config{http_url}}/view/type/image/" data-track="click.contentType.photos" class="a w-12">
+                                <div style="background-image: url({$config{http_root}}/bootstrap_assets/Images/photo.jpg);" class="img">
+                                    <h4 class="h4"><i class="fa fa-camera fa-lg" aria-hidden="true"> </i> Photos</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="media-module footage col-xs-4 margin-bottom">
+                            <a href="{$config{http_url}}/view/type/video/" data-track="click.contentType.footage" class="a w-12">
+                                <div style="background-image: url({$config{http_root}}/bootstrap_assets/Images/video.jpg);" class="img">
+                                    <h4 class="h4"><i class="fa fa-video-camera fa-lg" aria-hidden="true"> </i> Videos</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="media-module music col-xs-4 margin-bottom">
+                            <a href="{$config{http_url}}/view/type/audio/" data-track="click.contentType.music" class="a w-12">
+                                <div style="background-image: url({$config{http_root}}/bootstrap_assets/Images/audio.jpg);" class="img">
+                                    <h4 class="h4"><i class="fa fa-headphones fa-lg" aria-hidden="true"> </i> Audio</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+          
+            <section class="homepage-media-modules module addition">
+                <div style="clear:both" />
+                <h3>Latest Additions</h3>
+                <div id="latest_items" />
+                <script type="text/javascript">
+                    new Ajax.Updater('latest_items', eprints_http_root + '/cgi/latest_tool?mode=frontpage&amp;mainonly=yes', {
+                        method: 'get'
+                    });
+                </script>
+            </section>
+            
+            <section class="homepage-media-modules module featured">
+                <h3>Featured items</h3>
+                <epc:phrase ref="carousel" />
+            </section>
+            <section class="homepage-media-modules module bottom">
+                <epc:phrase ref="frontpage:browse" />
+                <div class="ep_toolbox col-md-5ths col-xs-6">
+                    <epc:phrase ref="frontpage:fp_browse_countries" />
+                    <div id="fp_browse_countries" />
+                    <script type="text/javascript">
+                        new Ajax.Updater('fp_browse_countries', eprints_http_root + '/fp_browse_countries.html?lang=en', {method: 'get'})
+                    </script>
+                    <a href="{$config{http_url}}/view/countries/"><epc:phrase ref="frontpage:browse_more" /></a>
+                </div>
+                <div class="ep_toolbox col-md-5ths col-xs-6">
+                    <epc:phrase ref="frontpage:fp_browse_collections" />
+                    <div id="fp_browse_collections" />
+                    <script type="text/javascript">
+                        new Ajax.Updater('fp_browse_collections', eprints_http_root + '/fp_browse_collections.html?lang=en', {method: 'get'})
+                    </script>
+                    <a href="{$config{http_url}}/view/collections/"><epc:phrase ref="frontpage:browse_more" /></a>
+                </div>
+                <div class="ep_toolbox col-md-5ths col-xs-6">
+                    <epc:phrase ref="frontpage:fp_browse_events" />
+                    <div id="fp_browse_events" />
+                    <script type="text/javascript">
+                        new Ajax.Updater('fp_browse_events', eprints_http_root + '/fp_browse_events.html?lang=en', {method: 'get'})
+                    </script>
+                    <a href="{$config{http_url}}/view/events/"><epc:phrase ref="frontpage:browse_more" /></a>
+                </div>
+                <div class="ep_toolbox col-md-5ths col-xs-6">
+                    <epc:phrase ref="frontpage:fp_browse_vips" />
+                    <div id="fp_browse_vips" />
+                    <script type="text/javascript">
+                        new Ajax.Updater('fp_browse_vips', eprints_http_root + '/fp_browse_vips.html?lang=en', {method: 'get'})
+                    </script>
+                    <a href="{$config{http_url}}/view/vips/"><epc:phrase ref="frontpage:browse_more" /></a>
+                </div>
+                <div class="ep_toolbox col-md-5ths col-xs-6">
+                    <epc:phrase ref="frontpage:fp_browse_subjects" />
+                    <div id="fp_browse_subjects" />
+                    <script type="text/javascript">
+                        new Ajax.Updater('fp_browse_subjects', eprints_http_root + '/fp_browse_subjects.html?lang=en', {method: 'get'})
+                    </script>
+                    <a href="{$config{http_url}}/view/subjects/"><epc:phrase ref="frontpage:browse_more" /></a>
+                </div>
+            </section>
+        </xpage:body>
+    </xpage:page>

@@ -1,0 +1,362 @@
+<?xml version="1.0" ?>
+    <cite:citation xmlns="http://www.w3.org/1999/xhtml" xmlns:epc="http://eprints.org/ep3/control" xmlns:cite="http://eprints.org/ep3/citation">
+        <div class="row voffset3">
+            <div id="summarypage_left" class="col-lg-5 col-md-5 col-sm-5 col-xm-12">
+                <epc:set name='docs' expr='$item.original_documents()'>
+                    <epc:if test="length($docs) gt 0">
+                        <epc:foreach expr="$docs" iterator="doc" limit="1">
+                            <div id="summary_downloads" class="summary-widget">
+                                <epc:choose>
+                                    <epc:when test="$doc.thumbnail_url('video_mp4').is_set()">
+                                        <div class="thumb-box">
+                                            <a href="#" data-toggle="modal" data-target="#VideoModal" title="{phrase('lib/document:preview')}" data-backdrop="static" data-keyboard="false">
+                                                <div class="thumb-box-overlay">
+                                                    <div class="center-box"><i class="glyphicon glyphicon-eye-open"></i> </div>
+                                                </div>
+                                                <!-- Video --><img class="ep_doc_icon img-responsive img-rounded eprint_main_image" border="0" src="{$doc.thumbnail_url('large_16x9')}" alt="{$doc{main}}" /> </a>
+                                        </div>
+                                        <div class="modal" id="VideoModal" tabindex="-1" role="dialog" aria-labelledby="VideoModalLabel" style="min-height:80%">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span> </button>
+                                                        <h4 class="modal-title" id="VideoModalLabel"></h4> </div>
+                                                    <div class="modal-body" style="min-height: 40vh;">
+                                                        <video id="video" class="video-js vjs-default-skin" controls="" preload="auto" width="100%" height="480px" poster="{$doc.thumbnail_url('large_16x9')}" data-setup="">
+                                                            <source src="{$doc.thumbnail_url('video_mp4')}" type='video/mp4' />
+                                                            <source src="" type='video/webm' />
+                                                            <source src="{$doc.thumbnail_url('video_ogv')}" type='video/ogg' />
+                                                            <p class="vjs-no-js">
+                                                                <epc:phrase ref='summary_page:vjs-no-js' /> </p>
+                                                        </video>
+                                                        <p>Preview link:
+                                                            <epc:print expr="$doc.preview_link(phrase('lib/document:preview'),'docs','video_mp4')" /> </p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </epc:when>
+                                    <epc:when test="$doc.thumbnail_url('audio_mp4').is_set()">
+                                        <epc:set name='covers' expr='$item.cover_image()'>
+                                            <epc:choose>
+                                                <epc:when test="length($covers) gt 0">
+                                                    <epc:foreach expr="$covers" iterator="cover" limit="1"> <img class="ep_doc_icon img-responsive img-rounded eprint_main_image" border="0" src="{$cover.thumbnail_url('large')}" alt="{$doc{main}}" /> </epc:foreach>
+                                                </epc:when>
+                                                <epc:otherwise>
+                                                    <div class="center-box"><i class="fa fa-music fa-5" aria-hidden="true"></i> </div>
+                                                </epc:otherwise>
+                                            </epc:choose>
+                                        </epc:set>
+                                        <audio controls="">
+                                            <source src="{$doc.thumbnail_url('audio_mp4')}" type="audio/mp4" />
+                                            <source src="{$doc.thumbnail_url('audio_ogg')}" type="audio/ogg" />
+                                            <p class="vjs-no-js">
+                                                <epc:phrase ref='summary_page:vjs-no-js' /> </p>
+                                        </audio>
+                                    </epc:when>
+                                    <!--<epc:when test="$doc.thumbnail_url('flexpaper').is_set()">
+                                    <button type="button" class="btn btn-default btn-block">
+                                        <epc:print expr="$doc.preview_link(phrase('lib/document:preview'),'docs','flexpaper')" />
+                                    </button>
+                                </epc:when>-->
+                                    <epc:when test="$doc.iipimage_thumbnail_url().is_set()">
+                                        <div class="thumb-box">
+                                            <script src="//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/Leaflet.fullscreen.min.js" />
+                                            <link rel="stylesheet" href="//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/leaflet.fullscreen.css" />
+                                            <div id="iiptarget" data-image="{$doc.iipimage_thumbnail_url()}" data-credit="{$item.property('credit_line')}" style="height:240px; position: relative; background: black none repeat scroll 0% 0%;" class="leaflet-container leaflet-fade-anim leaflet-grab leaflet-touch-drag" tabindex="0"></div>
+                                            <script>
+                                                (function ($) {
+                                                    $(document).ready(function () {
+                                                        var fif = "/fcgi-bin/iipsrv.fcgi?FIF=" + $('#iiptarget').data('image');
+                                                        var credit = $('#iiptarget').data('credit');
+                                                        var mymap = L.map('iiptarget', {
+                                                            fullscreenControl: true
+                                                            , zoom: 1
+                                                            , center: [0.0, 0.0]
+                                                            , fitBounds: true
+                                                        });
+                                                        L.tileLayer.iip(fif, {
+                                                            reuseTiles: true
+                                                        }).addTo(mymap);
+                                                        var logo = L.control({
+                                                            position: 'bottomleft'
+                                                        });
+                                                        logo.onAdd = function (mymap) {
+                                                            var div = L.DomUtil.create('div', 'mylogo');
+                                                            div.innerHTML = '<img src="{$config{http_root}}/images/map_logo.png"/>';
+                                                            return div;
+                                                        }
+                                                        logo.addTo(mymap);
+                                                        mymap.attributionControl.setPrefix(credit);
+                                                    });
+                                                })(jQuery);
+                                            </script>
+                                        </div>
+                                    </epc:when>
+                                </epc:choose>
+                                <!-- download... -->
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <epc:phrase ref='summary_page:downloads_hd' /> </div>
+                                    <div class="panel-body">
+                                        <div class="col-md-8">
+                                            <dl>
+                                                <epc:if test="$doc{main}"> <dt><epc:phrase ref='lib/submissionform:filename'/>:</dt>
+                                                    <dd>
+                                                        <epc:print expr="$doc{main}" />
+                                                    </dd>
+                                                </epc:if>
+                                                <epc:if test="$doc{formatdesc}"> <dt><epc:phrase ref='document_fieldname_formatdesc'/>:</dt>
+                                                    <dd>
+                                                        <epc:print expr="$doc{formatdesc}" />
+                                                    </dd>
+                                                </epc:if>
+                                                <epc:if test="$doc{license}"> <dt><epc:phrase ref='document_fieldname_license'/>:</dt>
+                                                    <dd>
+                                                        <epc:print expr="$doc{license}" />
+                                                    </dd>
+                                                </epc:if>
+                                                <epc:if test="$doc{language} and $doc{language} ne 'none'"> <dt><epc:phrase ref='document_fieldname_language'/>:</dt>
+                                                    <dd>
+                                                        <epc:print expr="$doc{language}" />
+                                                    </dd>
+                                                </epc:if>
+                                                <epc:if test="$doc{media_width} and $doc{media_height}"> <dt><epc:phrase ref='cgi/users/status:cachesize'/>:</dt>
+                                                    <dd>
+                                                        <epc:print expr="$doc{media_width}" />x
+                                                        <epc:print expr="$doc{media_height}" />
+                                                    </dd>
+                                                </epc:if>
+                                                <epc:if test="$doc{date_embargo}"> <dt><epc:phrase ref='document_fieldname_date_embargo'/>:</dt>
+                                                    <dd>
+                                                        <epc:print expr="$doc{date_embargo}" />
+                                                    </dd>
+                                                </epc:if>
+                                            </dl>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <epc:choose>
+                                                <epc:when test="$doc.property('security') = 'paypal'">
+                                                    <div class="paypal-container ep_only_js" data-docid="{$doc.property('docid')}" />
+                                                    <a href="{$doc.thumbnail_url('preview')}" class="btn btn-primary btn-block" onclick="_gaq.push(['_trackEvent', 'Documents', 'Downloaded', '{type}' - {$doc.property('format')}', '{$item.property('title')}' ]);" title="Download Preview" download="{$doc.thumbnail_url('preview')}"><epc:phrase ref="summary_page:download_preview" /></a>
+                                                </epc:when>
+                                                <epc:otherwise>
+                                                    <epc:if test="$doc.is_public() and eprint_status = 'archive'">
+                                                        <a href="{$doc.url()}" class="btn btn-primary btn-block" onclick="_gaq.push(['_trackEvent', 'Documents', 'Downloaded', '{type}' - {$doc.property('format')}', '{$item.property('title')}' ]);" title="($doc.doc_size().human_filesize())" alt="" download="{$doc.url()}"><epc:phrase ref="summary_page:download" /></a>
+                                                    </epc:if>
+                                                    <epc:if test="!$doc.is_public() and $item.contact_email().is_set() and eprint_status = 'archive'">
+                                                        <a href="{$config{http_cgiurl}}/request_doc?docid={$doc{docid}}">
+                                                            <epc:phrase ref="request:button" />
+                                                        </a>
+                                                    </epc:if>
+                                                </epc:otherwise>
+                                            </epc:choose>
+                                        </div>
+                                    </div>
+                                </div>
+                                <epc:set name='other_docs' expr='$item.original_documents()'>
+                                    <epc:if test="length($other_docs) gt 1">
+                                        <epc:foreach expr="$other_docs" iterator="odoc">
+                                            <epc:if test="$odoc{placement} gt 0">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <a data-toggle="collapse" data-parent="#downloads-accordion" href="#collapse_{$odoc{docid}}">
+                                                            <epc:phrase ref='summary_page:downloads_others' />:
+                                                            <epc:print expr="$odoc{main}" />
+                                                        </a>
+                                                    </div>
+                                                    <div id="collapse_{$odoc{docid}}" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="col-md-8">
+                                                                <dl>
+                                                                    <epc:if test="$odoc{main}"> <dt><epc:phrase ref='lib/submissionform:filename'/>:</dt>
+                                                                        <dd>
+                                                                            <epc:print expr="$odoc{main}" />
+                                                                        </dd>
+                                                                    </epc:if>
+                                                                    <epc:if test="$odoc{formatdesc}"> <dt><epc:phrase ref='document_fieldname_formatdesc'/>:</dt>
+                                                                        <dd>
+                                                                            <epc:print expr="$odoc{formatdesc}" />
+                                                                        </dd>
+                                                                    </epc:if>
+                                                                    <epc:if test="$odoc{license}"> <dt><epc:phrase ref='document_fieldname_license'/>:</dt>
+                                                                        <dd>
+                                                                            <epc:print expr="$odoc{license}" />
+                                                                        </dd>
+                                                                    </epc:if>
+                                                                    <epc:if test="$odoc{language} and $odoc{language} != 'none'"> <dt><epc:phrase ref='document_fieldname_language'/>:</dt>
+                                                                        <dd>
+                                                                            <epc:print expr="$odoc{language}" />
+                                                                        </dd>
+                                                                    </epc:if>
+                                                                    <epc:if test="$odoc{media_width} and $odoc{media_height}"> <dt><epc:phrase ref='cgi/users/status:cachesize'/>:</dt>
+                                                                        <dd>
+                                                                            <epc:print expr="$odoc{media_width}" />x
+                                                                            <epc:print expr="$odoc{media_height}" />
+                                                                        </dd>
+                                                                    </epc:if>
+                                                                    <epc:if test="$odoc{date_embargo}"> <dt><epc:phrase ref='document_fieldname_date_embargo'/>:</dt>
+                                                                        <dd>
+                                                                            <epc:print expr="$odoc{date_embargo}" />
+                                                                        </dd>
+                                                                    </epc:if>
+                                                                </dl>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <epc:choose>
+                                                                    <epc:when test="$odoc.property('security') = 'paypal'">
+                                                                        <div class="paypal-container ep_only_js" data-docid="{$odoc.property('docid')}" />
+                                                                        <a href="{$odoc.thumbnail_url('preview')}" class="btn btn-primary btn-block" onclick="_gaq.push(['_trackEvent', 'Documents', 'Downloaded', '{type}' - {$odoc.property('format')}', '{$item.property('title')}' ]);" title="Download Preview" download="{$odoc{main}}">
+                                                                            <epc:phrase ref="summary_page:download_preview" /> </a>
+                                                                    </epc:when>
+                                                                    <epc:otherwise>
+                                                                        <epc:if test="$odoc.is_public() and eprint_status = 'archive'">
+                                                                            <a href="{$odoc.url()}" class="ep_document_link btn btn-primary btn-block" onclick="_gaq.push(['_trackEvent', 'Documents', 'Downloaded', '{type}' - {$odoc.property('format')}', '{$item.property('title')}' ]);" title="" alt="($odoc.doc_size().human_filesize())" download="{$odoc{main}}">
+                                                                                <epc:phrase ref="summary_page:download" />
+                                                                            </a>
+                                                                            <a href="{$odoc.thumbnail_url('preview')}" class="btn btn-primary btn-block" onclick="_gaq.push(['_trackEvent', 'Documents', 'Downloaded', '{type}' - {$odoc.property('format')}', '{$item.property('title')}' ]);" title="Download Preview" download="{$odoc{main}}">
+                                                                                <epc:phrase ref="summary_page:download_preview" />
+                                                                            </a>
+                                                                        </epc:if>
+                                                                        <epc:if test="!$odoc.is_public() and $item.contact_email().is_set() and eprint_status = 'archive'">
+                                                                            <a href="{$config{http_cgiurl}}/request_doc?docid={$doc{docid}}">
+                                                                                <epc:phrase ref="request:button" />
+                                                                            </a>
+                                                                        </epc:if>
+                                                                    </epc:otherwise>
+                                                                </epc:choose>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </epc:if>
+                                        </epc:foreach>
+                                    </epc:if>
+                                </epc:set>
+                            </div>
+                            <!-- End summary_downloads -->
+                        </epc:foreach>
+                    </epc:if>
+                </epc:set>
+                <div id="summray_related">
+                    <epc:if test="is_set($item.property('latitude'))"> <img src="//en.unesco.org/tiles/staticmap/staticmap.php?center={$item.property('latitude')},{$item.property('longitude')}&amp;zoom=2&amp;size=512x255&amp;maptype=unescog&amp;markers={$item.property('latitude')},{$item.property('longitude')},0075d1" alt="{$item.property('where_shown_country')}" class="img-responsive img-rounded" /> </epc:if>
+                    <epc:if test="is_set($item.property('title_artwork')) or is_set($item.property('date_artwork')) or is_set($item.property('creator_artwork')) or is_set($item.property('source_artwork')) or is_set($item.property('source_ID_artwork')) or is_set($item.property('copyright_artwork'))">
+                        <h2>Artwork information</h2>
+                        <table class="table" style="margin-bottom: 1em; margin-top: 1em;" cellpadding="3">
+                            <epc:foreach expr="$config{summary_page_artwork}" iterator="fieldname">
+                                <epc:if test="is_set($item.property($fieldname))">
+                                    <tr>
+                                        <th align="right">
+                                            <epc:phrase ref="eprint_fieldname_{$fieldname}" />:</th>
+                                        <td valign="top">
+                                            <epc:print expr="$item.property($fieldname)" /> </td>
+                                    </tr>
+                                </epc:if>
+                            </epc:foreach>
+                        </table>
+                    </epc:if>
+                </div>
+            </div>
+            <div id="summarypage_right" class="col-lg-7 col-md-7 col-sm-7 col-xm-12">
+                <!-- Summary -->
+                <div id="summary_abstract" class="summary-widget">
+                    <epc:if test="is_set($item.property('headline'))">
+                        <p class="lead">
+                            <epc:print expr="headline" /> </p>
+                    </epc:if>
+                    <epc:if test="is_set($item.property('abstract'))">
+                        <p class="abstract"><strong><epc:phrase ref="eprint_fieldname_abstract"/>:</strong>
+                            <epc:print expr="abstract" /> </p>
+                    </epc:if>
+                    <epc:if test="is_set($item.property('official_url'))">
+                        <p class="official_url"><strong><epc:phrase ref="viewname_more" />:</strong>
+                            <epc:print expr="official_url" /> </p>
+                    </epc:if>
+                    <epc:if test="is_set($item.property('keywords'))">
+                        <p class="voffset1 keywords"><strong><epc:phrase ref="viewname_eprint_keywords" />:</strong>
+                            <epc:print expr="keywords" /> </p>
+                    </epc:if>
+                </div>
+                <!-- Metadata -->
+                <!--                <div id="summary_share" class="centered voffset3"> <span class='st_facebook_large' displayText='Facebook'></span> <span class='st_googleplus_large' displayText='Google +'></span> <span class='st_twitter_large' displayText='Tweet'></span> <span class='st_linkedin_large' displayText='LinkedIn'></span> <span class='st_pinterest_large' displayText='Pinterest'></span> <span class='st_email_large' displayText='Email'></span> <span class='st_sharethis_large' displayText='ShareThis'></span> <span class='st_plusone_large' displayText='Google +1'></span> <span class='st_fblike_large' displayText='Facebook Like'></span> </div>-->
+                <div id="summary_metadata">
+                    <table class="table metadata" style="margin-bottom: 1em; margin-top: 1em;" cellpadding="3">
+                        <epc:comment> The below block loops over a list of field names taken from eprint_render.pl Edit the list of metadata to show in the summary page table in eprint_render.pl </epc:comment>
+                        <epc:foreach expr="$config{summary_page_image}" iterator="fieldname">
+                            <epc:if test="is_set($item.property($fieldname))">
+                                <tr  class="$fieldname" >
+                                    <th align="right">
+                                        <epc:phrase ref="eprint_fieldname_{$fieldname}" />:</th>
+                                    <td valign="top">
+                                        <epc:print expr="$item.property($fieldname)" /> </td>
+                                </tr>
+                            </epc:if>
+                        </epc:foreach>
+                        <epc:foreach expr="$config{summary_page_contact}" iterator="fieldname">
+                            <epc:if test="is_set($item.property($fieldname))">
+                                <tr  class="$fieldname" >
+                                    <th align="right">
+                                        <epc:phrase ref="eprint_fieldname_{$fieldname}" />:</th>
+                                    <td valign="top">
+                                        <epc:print expr="$item.property($fieldname)" /> </td>
+                                </tr>
+                            </epc:if>
+                        </epc:foreach>
+                        <epc:foreach expr="$config{summary_page_status}" iterator="fieldname">
+                            <epc:choose>
+                                <epc:when test="$fieldname = 'source'">
+                                    <tr  class="source" >
+                                        <th align="right">
+                                            <epc:phrase ref="eprint_fieldname_source" />:</th>
+                                        <td valign="top">
+                                            <epc:print expr="$item.property('source')" />
+                                            <epc:print expr="$item.property('job_identifier')" /> </td>
+                                    </tr>
+                                </epc:when>
+                                <epc:otherwise>
+                                    <epc:if test="is_set($item.property($fieldname))">
+                                        <tr  class="$fieldname" >
+                                            <th align="right">
+                                                <epc:phrase ref="eprint_fieldname_{$fieldname}" />:</th>
+                                            <td valign="top">
+                                                <epc:print expr="$item.property($fieldname)" /> </td>
+                                        </tr>
+                                    </epc:if>
+                                </epc:otherwise>
+                            </epc:choose>
+                        </epc:foreach>
+                        <!--
+                        TODO: display only if logged in
+                        <epc:foreach expr="$config{summary_page_metadata}" iterator="fieldname">
+                            <epc:if test="is_set($item.property($fieldname))">
+                                <tr>
+                                    <th align="right">
+                                        <epc:phrase ref="eprint_fieldname_{$fieldname}" />:</th>
+                                    <td valign="top">
+                                        <epc:print expr="$item.property($fieldname)" /> </td>
+                                </tr>
+                            </epc:if>
+                        </epc:foreach>
+                        -->
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <epc:if test="!$flags{preview}">
+                <div id="summary_buttons" class="summary-widget">
+                    <div class="btn-group pull-right">
+                        <a class="btn btn-primary btn-sm" href="mailto:{$config{adminemail}}?subject=I want to report this record: {phrase('archive_name')} {eprintid}">
+                            <epc:phrase ref="template:report_button" /> </a>
+                        <a class="btn btn-primary btn-sm" href="{$config{http_root}}/cgi/users/home&#63;screen=EPrint%3A%3AView&amp;eprintid={eprintid}">
+                            <epc:phrase ref="template:details_button" /> </a>
+                        <a class="btn btn-primary btn-sm" href="{$config{http_root}}/cgi/export/eprint/{eprintid}/XML/{phrase('archive_name')}_{eprintid}.xml">
+                            <epc:phrase ref="template:export_button" /> </a>
+                    </div>
+                </div>
+            </epc:if>
+        </div>
+    </cite:citation>

@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html SYSTEM "entities.dtd">
+<cite:citation xmlns="http://www.w3.org/1999/xhtml" xmlns:cite="http://eprints.org/ep3/citation" xmlns:epc="http://eprints.org/ep3/control">
+    <div class="item {$active}">
+            <epc:choose>
+                <epc:when test="$item.carousel_image().is_set()">
+                    <img src="{$item.carousel_image().thumbnail_url('carousel')}" />
+                </epc:when>
+                <epc:otherwise>
+                    <div class="carousel-slide-image-placeholder"></div>
+                </epc:otherwise>
+            </epc:choose>
+        <div class="carousel-caption">
+            <cite:linkhere>
+                <epc:choose>
+                    <epc:when test="strlen(title) gt 90">
+                        <h3>
+                            <epc:print expr="substr(title,0,80)" />...
+                        </h3>
+                    </epc:when>
+                    <epc:otherwise>
+                        <h3>
+                            <epc:print expr="title" />
+                        </h3>
+                    </epc:otherwise>
+                </epc:choose>
+            </cite:linkhere>
+            <epc:if test="is_set(date)">
+                <epc:print expr="substr(date.as_string(),0,4)" />
+            </epc:if>
+            <epc:if test="is_set(creators_name)">
+                <epc:choose>
+                    <epc:when test="length(creators_name) gt 7">
+                        <epc:set name="creators" expr="creators_name" limit="5">
+                            <epc:foreach expr="$creators" iterator="creator">
+                                <epc:print expr="$creator" />
+                                <epc:phrase ref="lib/metafield:join_name" />
+                            </epc:foreach>
+                            ...
+                        </epc:set>
+                    </epc:when>
+                    <epc:otherwise>
+                        <epc:print expr="creators_name" />
+                    </epc:otherwise>
+                </epc:choose>
+            </epc:if>
+        </div>
+    </div>
+</cite:citation>

@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+
+<cite:citation xmlns="http://www.w3.org/1999/xhtml" xmlns:cite="http://eprints.org/ep3/citation" xmlns:epc="http://eprints.org/ep3/control">
+    <epc:set name='docs' expr='$item.original_documents()'>
+        <epc:if test="length($docs) gt 0">
+            <epc:foreach expr="$docs" iterator="doc" limit="1">
+                <div class="media">
+                    <div class="pull-left">
+                        <cite:linkhere><img src="{$doc.thumbnail_url('small')}" class="media-object img-responsive img-rounded" alt="{$item.property('title')}" /></cite:linkhere>
+                    </div>
+                    <div class="media-body">
+                        <epc:choose>
+                            <epc:when test="strlen(title) gt 90">
+                                <h4 class="media-heading"><cite:linkhere><epc:print expr="substr(title,0,80)" />...</cite:linkhere></h4>
+                            </epc:when>
+                            <epc:otherwise>
+                                <h4 class="media-heading"><cite:linkhere><epc:print expr="title" /></cite:linkhere></h4>
+                            </epc:otherwise>
+                        </epc:choose>
+                        <p>
+                            <epc:if test="is_set(date)"><epc:print expr="substr(date.as_string(),0,4)" />, </epc:if>
+                            <epc:if test="is_set(creators_name)">
+                                <epc:if test="length(creators_name) gt 0">
+                                    <epc:set name="creators" expr="creators_name" limit="1">
+                                        <epc:foreach expr="$creators" iterator="creator">
+                                            <epc:print expr="$creator" />
+                                        </epc:foreach>
+                                    </epc:set>
+                                </epc:if>
+                            </epc:if>
+                        </p>
+<!--                        <epc:if test="is_set($item.property('abstract'))">
+                            <p><epc:print expr="abstract" /></p>
+                        </epc:if>
+-->
+                    </div>
+                </div>
+            </epc:foreach>
+        </epc:if>
+    </epc:set>
+</cite:citation>

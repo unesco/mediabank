@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+
+<cite:citation xmlns="http://www.w3.org/1999/xhtml" xmlns:cite="http://eprints.org/ep3/citation" xmlns:epc="http://eprints.org/ep3/control">
+    <div class="paypal-admin">
+        <a href="{$item.url()}" class="ep_document_link" onclick="_gaq.push(['_trackEvent', 'Documents', 'Downloaded', '{type}', '{$item.property('title')}' ]);" title="" alt="[$item.doc_size().human_filesize()]"><epc:phrase ref="summary_page:download"/> 
+            [<epc:print expr="$item.doc_size().human_filesize()" />] <span class="glyphicon glyphicon-download-alt"/></a>
+    </div>
+</cite:citation>

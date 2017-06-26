@@ -1,0 +1,38 @@
+.region-sidebar-second #block-menu-menu-social-media {
+  right: 253px;
+}
+
+/* -------------------------------------------------------
+Styles for content listing in blocks - Apply in your view 
+----------------------------------------------------------*/
+
+.views-block-listing {
+
+  &.with-attachement {
+    .attachment-before {
+      float: right;
+    }
+    > .attachment-before + .view-content {
+      float: left;
+    }
+  }
+}
+
+
+/* ---------------------------------------------------------------------
+Styles for content listing in blocks with RIGHT SIDE IMAGE - Apply in your view
+------------------------------------------------------------------------ */
+
+.views-block-publication-vertical {
+  .list-unstyled {
+    padding-right: 0;
+  }
+  .views-row {
+    > div {
+      &:first-child {
+        margin-left: 3px;
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE phrases SYSTEM "entities.dtd">
+<epp:phrases xmlns="http://www.w3.org/1999/xhtml" xmlns:epp="http://eprints.org/ep3/phrase" xmlns:epc="http://eprints.org/ep3/control">
+    <epp:comment>Countries</epp:comment>
+    <epp:phrase id="viewtitle_eprint_countries_list">
+        <h1><epc:pin name="value1" /></h1>
+        <div id="mapid" class="leaflet-container leaflet-fade-anim leaflet-grab leaflet-touch-drag" style="width: 100%; height: 400px; position: relative; outline: medium none; margin-bottom: 20px" tabindex="0" />
+    </epp:phrase>
+    <epp:phrase id="viewname_eprint_vips">People featured</epp:phrase>
+    <epp:phrase id="viewtitle_eprint_vips_list">People featured: <epc:pin name="value1" /> </epp:phrase>
+    <epp:phrase id="viewname_eprint_events">Events</epp:phrase>
+    <epp:phrase id="viewtitle_eprint_events_list">Event: <epc:pin name="value1" /> </epp:phrase>
+    <epp:phrase id="viewname_eprint_organisations">Organisations</epp:phrase>
+    <epp:phrase id="viewtitle_eprint_organisations_list">Organisation: <epc:pin name="value1" /> </epp:phrase>
+    <epp:phrase id="viewname_eprint_collections">Collections</epp:phrase>
+    <epp:phrase id="viewtitle_eprint_collections_list">Collection: <epc:pin name="value1" /> </epp:phrase>
+    <epp:phrase id="viewname_eprint_type">Type</epp:phrase>
+    <epp:phrase id="viewtitle_eprint_type_list">Type: <epc:pin name="value1" /> </epp:phrase>
+    <epp:phrase id="viewname_eprint_date">Date</epp:phrase>
+    <epp:phrase id="viewtitle_eprint_date_list">Date: <epc:pin name="value1" /> </epp:phrase>
+</epp:phrases>

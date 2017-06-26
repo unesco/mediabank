@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no" ?>
+<!DOCTYPE page SYSTEM "entities.dtd" >
+<xpage:page xmlns="http://www.w3.org/1999/xhtml" xmlns:xpage="http://eprints.org/ep3/xpage" xmlns:epc="http://eprints.org/ep3/control">
+    <xpage:head>
+        <link rel="alternate" type="application/rss+xml" title="Items in {phrase('archive_name')}" href="{$config{http_root}}/latest_tool?output=RSS2"></link>
+        <link rel="alternate" type="application/atom+xml" title="Items in {phrase('archive_name')}" href="{$config{http_root}}/latest_tool?output=Atom"></link>
+        <link rel="alternate" type="application/rdf+xml" title="Repository Summary RDF+XML" href="{$config{http_root}}/export/repository/RDFXML/devel.rdf"></link>
+        <link rel="alternate" type="text/n3" title="Repository Summary RDF+N3" href="{$config{http_root}}/export/repository/RDFN3/devel.n3"></link>
+    </xpage:head>
+    <xpage:title>Welcome to
+        <epc:phrase ref="archive_name" />
+    </xpage:title>
+    <xpage:body>
+        <div class="row">
+
+                <h3>Featured items</h3>
+                <epc:phrase ref="carousel"/>
+
+        </div>
+        <div class="row">
+
+                <div style="clear:both" />
+                <h3>Latest Additions</h3>
+                <div id="latest_items"/>
+                <script type="text/javascript">new Ajax.Updater('latest_items', eprints_http_root + '/cgi/latest_tool?mode=frontpage&amp;mainonly=yes', {method:'get'});</script>
+
+        </div>
+        <div class="row">
+
+                <div class="ep_toolbox col-md-4 col-sm-6 col-xs-12">
+                    <div class="ep_toolbox_content">
+                        <div class="thumbnail">
+                            <a class="" href="{$config{http_root}}/view/subjects/">Browse Repository</a>
+                            <p>Browse the items in the repository by subject.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ep_toolbox  col-md-4 col-sm-6 col-xs-12">
+                    <div class="ep_toolbox_content">
+                        <div class="thumbnail">
+                            <a class="" href="{$config{http_root}}/information.html">About this Repository</a>
+                            <p>More information about this site.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ep_toolbox col-md-4 col-sm-6 col-xs-12">
+                    <div class="ep_toolbox_content">
+                        <div class="thumbnail">
+                            <a class="" href="{$config{http_root}}/policies.html">Repository Policies</a>
+                            <p>Policy for use of material in this repository.</p>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="row">
+                <p style="margin-top: 2em; font-size: 90%">
+                    <epc:phrase ref="archive_name" /> supports <a href="http://www.openarchives.org"><abbr title="Open Archives Protocol for Metadata Harvesting v2.0">OAI 2.0</abbr></a> with a base URL of <tt><epc:print expr="$config{perl_url}" />/oai2</tt>
+                </p>
+        </div>    
+
+
+    </xpage:body>
+</xpage:page>
