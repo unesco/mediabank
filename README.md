@@ -31,6 +31,16 @@ On a debian system (I use Ubuntu):
     ```
     git submodule add https://github.com/unesco/mediabank.git archives/mediabank
     ```
+- install some extra perl modules:
+    - cpan install URI
+    - cpan install DBI
+    - cpan install JSON
+    - cpan install Text::Unidecode
+    - cpan install Term::ReadKey
+    - cpan install XML::NamespaceSupport
+    - cpan install Net::LDAP
+    - cpan install Image::Size
+    - cpan install Geo::Geonames
 - Customize:
     ``` 
     vi archives/mediabank/cfg/cfg.d/10_core.pl
@@ -46,10 +56,6 @@ On a debian system (I use Ubuntu):
         </IfModule>
     </IfModule>
     ```
-- install some extra perl modules:
-    - cpan install Net::LDAP
-    - cpan install Image::Size
-    - cpan install Geo::Geonames
 - install multilang fields
     ```
     wget http://bazaar.eprints.org/cgi/export/eprint/452/EPM/multilang_fields-0.0.9.epm
