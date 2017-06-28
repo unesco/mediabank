@@ -38,6 +38,7 @@ On a debian system (I use Ubuntu):
     - cpan install Text::Unidecode
     - cpan install Term::ReadKey
     - cpan install XML::NamespaceSupport
+    - cpan install XML::DOM
     - cpan install Net::LDAP
     - cpan install Image::Size
     - cpan install Geo::Geonames
