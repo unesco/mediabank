@@ -1,6 +1,9 @@
 # MediaBank
 The right place for your digital assets.
+
 EPrints implementation. Works on EPrints vanilla 3.3.10 - 3.3.15
+
+[Browse the wiki for more information](https://github.com/unesco/mediabank/wiki).
 
 # SuperPowers
 Few plugins have been created for this EPrints "flavour". Among them
